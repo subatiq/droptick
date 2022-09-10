@@ -26,23 +26,6 @@ extension Color {
     static let addTaskButtonShadowColor = Color("addTaskButtonShadowColor")
     static let sectionTitleColor = Color(hex: "8B87B3")
     static let rowColor = Color("rowColor")
-
-    static func categoryColor(for category: Todo.Category) -> Color {
-        switch category {
-        case .personal:
-            return Color(hex: "FFD506")
-        case .work:
-            return Color(hex: "1ED102")
-        case .meeting:
-            return Color(hex: "D10263")
-        case .study:
-            return Color(hex: "3044F2")
-        case .party:
-            return Color(hex: "F59BFF")
-        case .shopping:
-            return Color(hex: "F29130")
-        }
-    }
 }
 
 extension Color {

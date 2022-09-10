@@ -16,29 +16,18 @@ struct TaskListView: View {
 
     var body: some View {
         ScrollView {
-            ForEach(viewModel.dateKeys) { section in
-                VStack {
-                    HStack {
-                        Text(section.day)
-                            .foregroundColor(.sectionTitleColor)
-                            .font(.setFont(size: 14, weight: .medium))
-                        Spacer()
-                    }
-                    ForEach(viewModel.todos(for: section), id: \.id) { todo in
-                        TaskCell(todo: todo, onToggleCompletedTask: {
-                            self.viewModel.toggleIsCompleted(for: todo)
-                            generator.notificationOccurred(todo.isCompleted ? .error : .warning)
-                        }, onToggleSetReminder: {
-                            self.viewModel.toggleAlarm(for: todo)
-                            generator.notificationOccurred(todo.date.isPast ? .error : .warning)
-                        })
-                        .frame(height: 80)
-                    }
+            VStack(spacing: 0) {
+                ForEach(self.viewModel.todos(), id: \.id) { todo in
+                    TaskCell(todo: todo, onToggleCompletedTask: {
+                        self.viewModel.dataManager.delete(todo: todo)
+                    })
+                    .padding(.bottom, 2)
                 }
-                .padding(.top, 15)
-                .background(Color.backgroundColor)
             }
+            .rotationEffect(Angle(degrees: 180))
+                .background(Color.backgroundColor)
         }
+        .rotationEffect(Angle(degrees: 180))
         .navigationTitle(Text(title ?? ""))
         .background(Color.backgroundColor)
         .padding(.leading, 8)
@@ -54,6 +43,6 @@ struct TaskListView: View {
 
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskListView(viewModel: TaskListViewModel(dataManager: TodoDataManager()))
+        TaskListView(viewModel: TaskListViewModel(dataManager: MockDataManager()))
     }
 }

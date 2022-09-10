@@ -40,21 +40,24 @@
 		94C59A0A24E0AB89002635A7 /* TextWrappedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A0924E0AB89002635A7 /* TextWrappedLayout.swift */; };
 		94C59A0C24E0BE50002635A7 /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A0B24E0BE50002635A7 /* NewTaskViewModel.swift */; };
 		94C59A0F24E0C979002635A7 /* TaskTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A0E24E0C979002635A7 /* TaskTitleView.swift */; };
-		94C59A1124E0CAD1002635A7 /* TaskNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1024E0CAD1002635A7 /* TaskNoteView.swift */; };
-		94C59A1324E0CB5D002635A7 /* TaskDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1224E0CB5D002635A7 /* TaskDateView.swift */; };
-		94C59A1524E0CC45002635A7 /* TaskCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1424E0CC44002635A7 /* TaskCategoryView.swift */; };
 		94C59A1924E0E384002635A7 /* TodoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1624E0D98A002635A7 /* TodoApp.xcdatamodeld */; };
 		94C59A1B24E156BD002635A7 /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1A24E156BD002635A7 /* DependencyManager.swift */; };
 		94C59A1F24E20BA5002635A7 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A1D24E2088A002635A7 /* LocalNotificationManager.swift */; };
-		94C59A2124E420F1002635A7 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2EC24DA2D1600C300EB /* MainHeaderView.swift */; };
-		94C59A2324E4210A002635A7 /* MainHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A2224E4210A002635A7 /* MainHeaderViewModel.swift */; };
-		94C59A2724E4A206002635A7 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A2524E440C6002635A7 /* CategoriesView.swift */; };
-		94C59A2924E4A24A002635A7 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A2824E4A24A002635A7 /* CategoriesViewModel.swift */; };
-		94C59A2C24E4A7DF002635A7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A2A24E4A2DF002635A7 /* Category.swift */; };
-		94C59A2E24E4AFDD002635A7 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A2D24E4AFDD002635A7 /* CategoriesCell.swift */; };
 		94C59A3024E4BA36002635A7 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D32624DC535E00C300EB /* TaskListView.swift */; };
 		94C59A3224E4BB50002635A7 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A3124E4BB50002635A7 /* TaskListViewModel.swift */; };
 		94C59A3424E4C28F002635A7 /* TodoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C59A3324E4C28F002635A7 /* TodoDataManager.swift */; };
+		B104A86628CC7768006C144F /* TaskCostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104A86528CC7768006C144F /* TaskCostView.swift */; };
+		B104A86828CC78AC006C144F /* PickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B104A86728CC78AC006C144F /* PickerManager.swift */; };
+		B157440928CCEBD60052DF0E /* RegularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157440828CCEBD60052DF0E /* RegularButton.swift */; };
+		B157440B28CCFE670052DF0E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157440A28CCFE670052DF0E /* CloseButton.swift */; };
+		B157441328CD2CF10052DF0E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441228CD2CF10052DF0E /* WidgetKit.framework */; };
+		B157441528CD2CF10052DF0E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441428CD2CF10052DF0E /* SwiftUI.framework */; };
+		B157441828CD2CF10052DF0E /* WastedWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157441728CD2CF10052DF0E /* WastedWidget.swift */; };
+		B157441B28CD2CF40052DF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B157441A28CD2CF40052DF0E /* Assets.xcassets */; };
+		B157441D28CD2CF40052DF0E /* WastedWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B157441928CD2CF10052DF0E /* WastedWidget.intentdefinition */; };
+		B157441E28CD2CF40052DF0E /* WastedWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B157441928CD2CF10052DF0E /* WastedWidget.intentdefinition */; };
+		B157442128CD2CF40052DF0E /* WastedWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B177635028CCB20B005A80FF /* TimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177634F28CCB20B005A80FF /* TimeStats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +75,28 @@
 			remoteGlobalIDString = 9490D29E24D9E66500C300EB;
 			remoteInfo = TodoApp;
 		};
+		B157441F28CD2CF40052DF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9490D29724D9E66500C300EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B157440F28CD2CF10052DF0E;
+			remoteInfo = WastedWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B157442528CD2CF40052DF0E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B157442128CD2CF40052DF0E /* WastedWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9490D29F24D9E66500C300EB /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +119,6 @@
 		9490D2E424DA16D400C300EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9490D2E824DA1FD900C300EB /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
 		9490D2EA24DA222C00C300EB /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
-		9490D2EC24DA2D1600C300EB /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		9490D2EF24DA3A1300C300EB /* NoTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskView.swift; sourceTree = "<group>"; };
 		9490D2F124DA3BFB00C300EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9490D2F524DAD2B700C300EB /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -116,19 +139,23 @@
 		94C59A0924E0AB89002635A7 /* TextWrappedLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWrappedLayout.swift; sourceTree = "<group>"; };
 		94C59A0B24E0BE50002635A7 /* NewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
 		94C59A0E24E0C979002635A7 /* TaskTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleView.swift; sourceTree = "<group>"; };
-		94C59A1024E0CAD1002635A7 /* TaskNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNoteView.swift; sourceTree = "<group>"; };
-		94C59A1224E0CB5D002635A7 /* TaskDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDateView.swift; sourceTree = "<group>"; };
-		94C59A1424E0CC44002635A7 /* TaskCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryView.swift; sourceTree = "<group>"; };
 		94C59A1724E0D98A002635A7 /* TodoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoApp.xcdatamodel; sourceTree = "<group>"; };
 		94C59A1A24E156BD002635A7 /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
 		94C59A1D24E2088A002635A7 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
-		94C59A2224E4210A002635A7 /* MainHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderViewModel.swift; sourceTree = "<group>"; };
-		94C59A2524E440C6002635A7 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
-		94C59A2824E4A24A002635A7 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
-		94C59A2A24E4A2DF002635A7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		94C59A2D24E4AFDD002635A7 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		94C59A3124E4BB50002635A7 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		94C59A3324E4C28F002635A7 /* TodoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDataManager.swift; sourceTree = "<group>"; };
+		B104A86528CC7768006C144F /* TaskCostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCostView.swift; sourceTree = "<group>"; };
+		B104A86728CC78AC006C144F /* PickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerManager.swift; sourceTree = "<group>"; };
+		B157440828CCEBD60052DF0E /* RegularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularButton.swift; sourceTree = "<group>"; };
+		B157440A28CCFE670052DF0E /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WastedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B157441228CD2CF10052DF0E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B157441428CD2CF10052DF0E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B157441728CD2CF10052DF0E /* WastedWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastedWidget.swift; sourceTree = "<group>"; };
+		B157441928CD2CF10052DF0E /* WastedWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WastedWidget.intentdefinition; sourceTree = "<group>"; };
+		B157441A28CD2CF40052DF0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B157441C28CD2CF40052DF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B177634F28CCB20B005A80FF /* TimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +180,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B157440D28CD2CF10052DF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B157441528CD2CF10052DF0E /* SwiftUI.framework in Frameworks */,
+				B157441328CD2CF10052DF0E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -162,6 +198,8 @@
 				9490D2A124D9E66500C300EB /* TodoApp */,
 				9490D2B324D9E66700C300EB /* TodoAppTests */,
 				9490D2BE24D9E66700C300EB /* TodoAppUITests */,
+				B157441628CD2CF10052DF0E /* WastedWidget */,
+				B157441128CD2CF10052DF0E /* Frameworks */,
 				9490D2A024D9E66500C300EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -172,6 +210,7 @@
 				9490D29F24D9E66500C300EB /* TodoApp.app */,
 				9490D2B024D9E66700C300EB /* TodoAppTests.xctest */,
 				9490D2BB24D9E66700C300EB /* TodoAppUITests.xctest */,
+				B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,13 +319,13 @@
 		9490D2E624DA1FA600C300EB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				94C59A2024E420E1002635A7 /* HeaderView */,
 				94C599FB24DF81E2002635A7 /* NewTask */,
 				9490D2EE24DA39FF00C300EB /* Home */,
-				94C59A2424E4408F002635A7 /* Categories */,
 				9490D2E424DA16D400C300EB /* MainView.swift */,
 				9490D2EA24DA222C00C300EB /* MainTabBar.swift */,
 				9490D2E824DA1FD900C300EB /* MainViewRouter.swift */,
+				B157440828CCEBD60052DF0E /* RegularButton.swift */,
+				B157440A28CCFE670052DF0E /* CloseButton.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -297,6 +336,7 @@
 				94C59A2F24E4B84B002635A7 /* TaskList */,
 				9490D2F124DA3BFB00C300EB /* HomeView.swift */,
 				9490D2EF24DA3A1300C300EB /* NoTaskView.swift */,
+				B177634F28CCB20B005A80FF /* TimeStats.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -305,7 +345,6 @@
 			isa = PBXGroup;
 			children = (
 				9490D2FE24DADA1B00C300EB /* Todo.swift */,
-				94C59A2A24E4A2DF002635A7 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,6 +403,7 @@
 				9490D32124DBB80900C300EB /* MockDataManager.swift */,
 				94C59A0324E095B0002635A7 /* TextFieldManager.swift */,
 				94C59A1A24E156BD002635A7 /* DependencyManager.swift */,
+				B104A86728CC78AC006C144F /* PickerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -372,30 +412,9 @@
 			isa = PBXGroup;
 			children = (
 				94C59A0E24E0C979002635A7 /* TaskTitleView.swift */,
-				94C59A1024E0CAD1002635A7 /* TaskNoteView.swift */,
-				94C59A1424E0CC44002635A7 /* TaskCategoryView.swift */,
-				94C59A1224E0CB5D002635A7 /* TaskDateView.swift */,
+				B104A86528CC7768006C144F /* TaskCostView.swift */,
 			);
 			path = Subviews;
-			sourceTree = "<group>";
-		};
-		94C59A2024E420E1002635A7 /* HeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				9490D2EC24DA2D1600C300EB /* MainHeaderView.swift */,
-				94C59A2224E4210A002635A7 /* MainHeaderViewModel.swift */,
-			);
-			path = HeaderView;
-			sourceTree = "<group>";
-		};
-		94C59A2424E4408F002635A7 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				94C59A2524E440C6002635A7 /* CategoriesView.swift */,
-				94C59A2D24E4AFDD002635A7 /* CategoriesCell.swift */,
-				94C59A2824E4A24A002635A7 /* CategoriesViewModel.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		94C59A2F24E4B84B002635A7 /* TaskList */ = {
@@ -408,6 +427,26 @@
 			path = TaskList;
 			sourceTree = "<group>";
 		};
+		B157441128CD2CF10052DF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B157441228CD2CF10052DF0E /* WidgetKit.framework */,
+				B157441428CD2CF10052DF0E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B157441628CD2CF10052DF0E /* WastedWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B157441728CD2CF10052DF0E /* WastedWidget.swift */,
+				B157441928CD2CF10052DF0E /* WastedWidget.intentdefinition */,
+				B157441A28CD2CF40052DF0E /* Assets.xcassets */,
+				B157441C28CD2CF40052DF0E /* Info.plist */,
+			);
+			path = WastedWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,10 +457,12 @@
 				9490D29B24D9E66500C300EB /* Sources */,
 				9490D29C24D9E66500C300EB /* Frameworks */,
 				9490D29D24D9E66500C300EB /* Resources */,
+				B157442528CD2CF40052DF0E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B157442028CD2CF40052DF0E /* PBXTargetDependency */,
 			);
 			name = TodoApp;
 			productName = TodoApp;
@@ -464,13 +505,30 @@
 			productReference = 9490D2BB24D9E66700C300EB /* TodoAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B157440F28CD2CF10052DF0E /* WastedWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B157442228CD2CF40052DF0E /* Build configuration list for PBXNativeTarget "WastedWidgetExtension" */;
+			buildPhases = (
+				B157440C28CD2CF10052DF0E /* Sources */,
+				B157440D28CD2CF10052DF0E /* Frameworks */,
+				B157440E28CD2CF10052DF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WastedWidgetExtension;
+			productName = WastedWidgetExtension;
+			productReference = B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9490D29724D9E66500C300EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					9490D29E24D9E66500C300EB = {
@@ -483,6 +541,9 @@
 					9490D2BA24D9E66700C300EB = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 9490D29E24D9E66500C300EB;
+					};
+					B157440F28CD2CF10052DF0E = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -502,6 +563,7 @@
 				9490D29E24D9E66500C300EB /* TodoApp */,
 				9490D2AF24D9E66700C300EB /* TodoAppTests */,
 				9490D2BA24D9E66700C300EB /* TodoAppUITests */,
+				B157440F28CD2CF10052DF0E /* WastedWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -531,6 +593,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B157440E28CD2CF10052DF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B157441B28CD2CF40052DF0E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -540,41 +610,38 @@
 			files = (
 				9490D32024DBB0C800C300EB /* Date+Extension.swift in Sources */,
 				9490D2EB24DA222C00C300EB /* MainTabBar.swift in Sources */,
-				94C59A1324E0CB5D002635A7 /* TaskDateView.swift in Sources */,
-				94C59A1524E0CC45002635A7 /* TaskCategoryView.swift in Sources */,
 				94C59A0224E0958A002635A7 /* MockDataManager.swift in Sources */,
 				94C59A0C24E0BE50002635A7 /* NewTaskViewModel.swift in Sources */,
 				9490D2E924DA1FD900C300EB /* MainViewRouter.swift in Sources */,
 				94C59A3424E4C28F002635A7 /* TodoDataManager.swift in Sources */,
+				B157440B28CCFE670052DF0E /* CloseButton.swift in Sources */,
 				9490D2DC24DA011100C300EB /* Str.swift in Sources */,
 				9490D2F024DA3A1300C300EB /* NoTaskView.swift in Sources */,
-				94C59A2C24E4A7DF002635A7 /* Category.swift in Sources */,
 				9490D2E724DA1FB700C300EB /* MainView.swift in Sources */,
 				9490D30624DB123100C300EB /* CoreDataPersistenceManager.swift in Sources */,
+				B157440928CCEBD60052DF0E /* RegularButton.swift in Sources */,
 				94C59A1F24E20BA5002635A7 /* LocalNotificationManager.swift in Sources */,
-				94C59A1124E0CAD1002635A7 /* TaskNoteView.swift in Sources */,
-				94C59A2E24E4AFDD002635A7 /* CategoriesCell.swift in Sources */,
+				B104A86628CC7768006C144F /* TaskCostView.swift in Sources */,
 				9490D2E124DA04AE00C300EB /* TodoGradient.swift in Sources */,
 				9490D2D324D9EFED00C300EB /* OnboardingView.swift in Sources */,
-				94C59A2324E4210A002635A7 /* MainHeaderViewModel.swift in Sources */,
 				94C59A1B24E156BD002635A7 /* DependencyManager.swift in Sources */,
 				9490D2D124D9EE5F00C300EB /* TodoAppApp.swift in Sources */,
 				9490D2F224DA3BFB00C300EB /* HomeView.swift in Sources */,
 				9490D32324DC172C00C300EB /* EnviromentKeysManager.swift in Sources */,
-				94C59A2124E420F1002635A7 /* MainHeaderView.swift in Sources */,
-				94C59A2924E4A24A002635A7 /* CategoriesViewModel.swift in Sources */,
 				94C59A1924E0E384002635A7 /* TodoApp.xcdatamodeld in Sources */,
 				9490D31E24DBAE8900C300EB /* Array+Extension.swift in Sources */,
 				94C59A0A24E0AB89002635A7 /* TextWrappedLayout.swift in Sources */,
 				94C59A0424E095B0002635A7 /* TextFieldManager.swift in Sources */,
 				94C59A0124E09586002635A7 /* DataManager.swift in Sources */,
 				94C59A3224E4BB50002635A7 /* TaskListViewModel.swift in Sources */,
+				B157441E28CD2CF40052DF0E /* WastedWidget.intentdefinition in Sources */,
 				9490D30E24DB96E500C300EB /* EnvironmentValues+Extension.swift in Sources */,
+				B104A86828CC78AC006C144F /* PickerManager.swift in Sources */,
 				94C599FF24DF8381002635A7 /* RoundedCorners.swift in Sources */,
 				94C59A3024E4BA36002635A7 /* TaskListView.swift in Sources */,
 				94C599FD24DF81FF002635A7 /* NewTaskView.swift in Sources */,
 				9490D2FF24DADA1B00C300EB /* Todo.swift in Sources */,
-				94C59A2724E4A206002635A7 /* CategoriesView.swift in Sources */,
+				B177635028CCB20B005A80FF /* TimeStats.swift in Sources */,
 				9490D2E324DA159600C300EB /* Font+Extension.swift in Sources */,
 				9490D31A24DBA40800C300EB /* TaskCell.swift in Sources */,
 				9490D30524DB11EE00C300EB /* PersistenceManager.swift in Sources */,
@@ -600,6 +667,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B157440C28CD2CF10052DF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B157441D28CD2CF40052DF0E /* WastedWidget.intentdefinition in Sources */,
+				B157441828CD2CF10052DF0E /* WastedWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -612,6 +688,11 @@
 			isa = PBXTargetDependency;
 			target = 9490D29E24D9E66500C300EB /* TodoApp */;
 			targetProxy = 9490D2BC24D9E66700C300EB /* PBXContainerItemProxy */;
+		};
+		B157442028CD2CF40052DF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B157440F28CD2CF10052DF0E /* WastedWidgetExtension */;
+			targetProxy = B157441F28CD2CF40052DF0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -667,7 +748,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -722,7 +803,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -735,44 +816,46 @@
 		9490D2C524D9E66700C300EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = T6TW87Y47D;
+				DEVELOPMENT_TEAM = WLF4K799KP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.simpumind.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.Wasted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9490D2C624D9E66700C300EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TodoApp/Preview Content\"";
-				DEVELOPMENT_TEAM = T6TW87Y47D;
+				DEVELOPMENT_TEAM = WLF4K799KP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TodoApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.simpumind.TodoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.Wasted;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -860,6 +943,64 @@
 			};
 			name = Release;
 		};
+		B157442328CD2CF40052DF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLF4K799KP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WastedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WastedWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.Wasted.WastedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B157442428CD2CF40052DF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLF4K799KP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WastedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WastedWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.Wasted.WastedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -895,6 +1036,15 @@
 			buildConfigurations = (
 				9490D2CB24D9E66700C300EB /* Debug */,
 				9490D2CC24D9E66700C300EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B157442228CD2CF40052DF0E /* Build configuration list for PBXNativeTarget "WastedWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B157442328CD2CF40052DF0E /* Debug */,
+				B157442428CD2CF40052DF0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

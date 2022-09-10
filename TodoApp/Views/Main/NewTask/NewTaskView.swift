@@ -7,60 +7,85 @@
 
 import SwiftUI
 
+
+enum CreationStep {
+    case TITLE, DURATION
+}
+
+class TaskCreationStep: ObservableObject {
+    @Published var currentStep: Int = 0
+    let maxStep: Int
+    
+    init(maxStep: Int = 2) {
+        self.maxStep = maxStep
+    }
+    
+    func increment() {
+        if self.currentStep < self.maxStep {
+            self.currentStep += 1
+        }
+    }
+    
+    func isCompleted() -> Bool {
+        return self.currentStep >= self.maxStep - 1
+    }
+}
+
 struct NewTaskView: View {
 
     @Environment(\.presentationMode) private var presentationMode
+    
+    let onComplete: (() -> Void)
 
     @ObservedObject var viewModel: NewTaskViewModel
+    @ObservedObject var creationStep = TaskCreationStep(maxStep: 2)
     @ObservedObject private var textFieldManager = TextFieldManager(characterLimit: 50)
-    @ObservedObject private var noteTextFieldManager = TextFieldManager(characterLimit: 80)
-
-    @State private var selectedDate = Date()
-    @State private var selectedCategoryColor: Color = .categoryColor(for: .personal)
-
-    @State private var showTaskTitleErrorMessage: Bool = false
-    @State private var showTaskNoteErrorMessage: Bool = false
-    @State private var showDateSelectedErrorMessage: Bool = false
-    @State private var category: Todo.Category = .personal
-
+    @ObservedObject private var costPickerManager = DurationPickerManager()
+    
+    @State private var nameEntered = false
+    
     var canCreateTask: Bool {
-        return !(showTaskTitleErrorMessage || showTaskNoteErrorMessage || showDateSelectedErrorMessage)
+        return costPickerManager.userInput > 0 && textFieldManager.userInput.count > 0 && nameEntered
     }
 
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-
-                RoundedRectangle(cornerRadius: 5, style: .circular)
-                    .foregroundColor(.gray)
-                    .frame(width: 70, height: 6)
-
-                VStack(alignment: .leading) {
-
-                    TaskTitleView(userInput: $textFieldManager.userInput, showErrorMessage: $showTaskTitleErrorMessage)
-
-                    TaskNoteView(userInput: $noteTextFieldManager.userInput, showErrorMessage: $showTaskNoteErrorMessage)
-
-                    TaskCategoryView(selectedCategoryColor: $selectedCategoryColor) { category in
-                        self.category = category
-                    }
-
-                    TaskDateView(selectedDate: $selectedDate, showErrorMessage: $showDateSelectedErrorMessage)
+//        GeometryReader { geometry in
+        VStack {
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                    TaskTitleView(userInput: $textFieldManager.userInput, duration: .constant(0), submitted: $nameEntered)
+                if nameEntered {
+                    TaskCostView(taskTitle: textFieldManager.userInput, userInput: $costPickerManager.userInput)
                 }
-
-                Spacer()
-
-                Button(Str.Main.NewTask.createTask) {
-                    self.createTask()
-                }
-                .padding()
-                .frame(width: geometry.size.width - 40, height: 50)
-                .foregroundColor(.white)
-                .background(Color.addTaskButtonColor.cornerRadius(5).opacity(0.9))
-
-                Spacer()
             }
-            .padding(.top)
+
+                Spacer()
+                
+                if self.canCreateTask {
+                    RegularButton(
+                        text: "Create",
+                        action: {
+                        createTask()
+                        onComplete()
+                    })
+
+                }
+                else {
+                    CloseButton(action: {
+                        
+                        onComplete()
+                    })
+                }
+            
+//            else if creationStep.currentStep == 0 {
+//                Button(Str.Main.NewTask.nextStep) {
+//                    self.creationStep.increment()
+//                }
+//                .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 10))
+//                .foregroundColor(.white)
+//                .background(Color.addTaskButtonColor.cornerRadius(5).opacity(0.9))
+//            }
         }
         .background(Color.backgroundColor)
         .onTapGesture {
@@ -75,23 +100,17 @@ struct NewTaskView: View {
 
     func createTask() {
         let title = textFieldManager.userInput
-        let note = noteTextFieldManager.userInput
+        let duration = costPickerManager.userInput
 
-        showTaskTitleErrorMessage = title.isEmpty
-        showTaskNoteErrorMessage = note.isEmpty
-        showDateSelectedErrorMessage = selectedDate.isPast
-
-        if canCreateTask {
-            let todo = Todo(title: title, category: category, note: note, date: selectedDate)
-            viewModel.addNewTask(todo: todo)
-            presentationMode.wrappedValue.dismiss()
-        }
+        let todo = Todo(title: title, duration: duration)
+        viewModel.addNewTask(todo: todo)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct NewTaskView_Previews: PreviewProvider {
     static var previews: some View {
-        NewTaskView(viewModel: NewTaskViewModel(dataManager: MockDataManager.shared))
+        NewTaskView(onComplete: {}, viewModel: NewTaskViewModel(dataManager: MockDataManager.shared))
             .preferredColorScheme(.dark)
     }
 }

@@ -14,19 +14,6 @@ final class TodoDataManager: ObservableObject {
 
     private let persistentManager = CoreDataPersistenceManager()
 
-    private let notificationManager: LocalNotificationManager
-
-    init(notificationManager: LocalNotificationManager = LocalNotificationManager.shared) {
-        self.notificationManager = notificationManager
-        authorizeLocalNotification()
-    }
-
-    private func authorizeLocalNotification() {
-        notificationManager.requestAuthorization { error in
-            print("Authorization result: \(String(describing: error))")
-        }
-    }
-
     private func getTodoMO(for todo: Todo) -> TodoMO? {
         let predicate = NSPredicate(format: "uuid = %@", todo.id as CVarArg)
         let result = persistentManager.fetchFirst(TodoMO.self, predicate: predicate)
@@ -48,6 +35,7 @@ extension TodoDataManager: DataManager {
         case .failure(_):
             return []
         }
+        
     }
 
     func add(todo: Todo) {
@@ -56,11 +44,8 @@ extension TodoDataManager: DataManager {
         let newTodo = TodoMO(entity: entity, insertInto: persistentManager.context)
         newTodo.uuid = UUID()
         newTodo.title = todo.title
+        newTodo.duration = todo.duration
         newTodo.isCompleted = false
-        newTodo.isAlarmSet = false
-        newTodo.category = todo.category.rawValue
-        newTodo.note = todo.note
-        newTodo.date = todo.date
         persistentManager.create(newTodo)
 
         onUpdate?()
@@ -70,34 +55,17 @@ extension TodoDataManager: DataManager {
         guard let todoMO = getTodoMO(for: todo) else { return }
         todoMO.isCompleted.toggle()
         persistentManager.update(todoMO)
+        
 
         onUpdate?()
     }
-
-    func toggleIsAlarmSet(for todo: Todo) {
+    
+    func delete(todo: Todo) {
         guard let todoMO = getTodoMO(for: todo) else { return }
-
-        !todo.isAlarmSet
-            ? scheduleNotification(todo: todo)
-            : cancelSchedule(for: todo)
-
-        todoMO.isAlarmSet.toggle()
-        persistentManager.update(todoMO)
+        print(1)
+        persistentManager.delete(todoMO)
+        print(2)
 
         onUpdate?()
-    }
-
-    func scheduleNotification(todo: Todo) {
-        let notificationData = LocationNotificationData(
-            title: todo.title,
-            body: todo.note,
-            date: todo.date,
-            medaData: LocationNotificationData.MetaData(id: todo.id.uuidString)
-        )
-        notificationManager.sechedule(data: notificationData)
-    }
-
-    func cancelSchedule(for todo: Todo) {
-        notificationManager.cancelNotification(id: todo.id.uuidString)
     }
 }

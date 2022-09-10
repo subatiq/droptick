@@ -12,25 +12,29 @@ struct HomeView: View {
     @ObservedObject var viewModel: TaskListViewModel
 
     var body: some View {
-        GeometryReader { geometry in
-            Group {
-                if viewModel.sectionedTodos.isEmpty {
-                    NoTaskView()
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                } else {
-                    TaskListView(viewModel: viewModel)
+        VStack {
+            
+            GeometryReader { geometry in
+                Group {
+                    if viewModel.sectionedTodos.isEmpty {
+                        NoTaskView()
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                    } else {
+                        TaskListView(viewModel: viewModel)
+                    }
                 }
             }
+            .onAppear {
+                viewModel.fetchTodos()
+            }
         }
-        .onAppear {
-            viewModel.fetchTodos()
-        }
+       
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(viewModel: TaskListViewModel(dataManager: TodoDataManager()))
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }

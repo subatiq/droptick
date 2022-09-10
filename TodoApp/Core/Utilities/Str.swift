@@ -43,12 +43,9 @@ struct Str {
         // Home
         struct NewTask {
             static let taskTitle: String = "Task title"
-            static let noteDescription: String = "Task description here"
+            static let taskCost: String = "How much time you want to spend on it this week?"
             static let createTask: String = "Create Task"
-            static let timeDate: String = "Time & Date"
-            static let taskTitleEmpty: String = "Task title cannot be empty!"
-            static let taskNoteEmpty: String = "Write a short note about the task"
-            static let lateDateSelected: String = "Please select a future date"
+            static let nextStep: String = "Next"
         }
 
         // Categories

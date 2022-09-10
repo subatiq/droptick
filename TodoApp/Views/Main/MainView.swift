@@ -7,39 +7,54 @@
 
 import SwiftUI
 
+extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+    }
+}
+
 struct MainView: View {
 
     @State var currentRoute: MainViewRouter.Route = .home
     @State var showNewTaskView = false
 
-    @StateObject var dataManager = TodoDataManager()
+    var viewModel: TaskListViewModel
+    var newTaskModel: NewTaskViewModel
+//    var dataManager = TodoDataManager()
+    init() {
+        let dataManager = TodoDataManager()
+        self.viewModel = TaskListViewModel(dataManager: dataManager)
+        self.newTaskModel = NewTaskViewModel(dataManager: dataManager)
+    }
+    
 
     var body: some View {
-        NavigationView {
             GeometryReader { geometry in
                 VStack {
-                    MainHeaderView(viewModel: MainHeaderViewModel(dataManager: dataManager))
-
-                    Group {
-                        switch currentRoute {
-                        case .home:
-                            HomeView(viewModel: TaskListViewModel(dataManager: dataManager))
-                        default:
-                            CategoriesView(viewModel: CategoriesViewModel(dataManager: dataManager))
+                    TimeStats(viewModel: viewModel)
+                    if (!showNewTaskView) {
+                        HomeView(viewModel: viewModel)
+                        MainTabBar(size: geometry.size, currentRoute: $currentRoute) {
+                            self.showNewTaskView.toggle()
                         }
                     }
-
-                    MainTabBar(size: geometry.size, currentRoute: $currentRoute) {
-                        self.showNewTaskView.toggle()
+                    else {
+                        NewTaskView(onComplete: {
+                            showNewTaskView = false
+                            hideKeyboard()
+                        },
+                        viewModel: newTaskModel)
                     }
                 }.padding(.bottom, 20)
             }
             .background(Color.backgroundColor)
-            .edgesIgnoringSafeArea(.all)
-            .sheet(isPresented: $showNewTaskView) {
-                NewTaskView(viewModel: NewTaskViewModel(dataManager: dataManager))
-            }
-        }
+    }
+    
+    func updateTimeStats() -> Void {
+        // FIXME: This is some stupid ass shit
+//        print("DSFSDF")
+//        timeStatsModel.update(dataManager: dataManager)
     }
 }
 

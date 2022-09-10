@@ -10,63 +10,55 @@ import SwiftUI
 import Combine
 
 protocol TaskListViewModelProtocol {
-    var dateKeys: [Date] { get }
-    var sectionedTodos: [Date: [Todo]] { get }
+    var sectionedTodos: [Todo] { get }
     func fetchTodos()
-    func todos(for key: Date) -> [Todo]
+    func todos() -> [Todo]
+    func totalDuration() -> Int
+    func delete(todo: Todo)
     func toggleIsCompleted(for todo: Todo)
-    func toggleAlarm(for todo: Todo)
 }
 
 final class TaskListViewModel: ObservableObject, TaskListViewModelProtocol {
 
-    @Published var sectionedTodos:  [Date: [Todo]] = [:]
+    @Published var sectionedTodos:  [Todo] = []
 
     let objectWillChange = PassthroughSubject<Void, Never>()
 
-    var dateKeys: [Date] {
-        return sectionedTodos
-            .map { $0.key }.sorted()
-    }
-
     var dataManager: DataManager
-    var category: Todo.Category?
 
-    init(dataManager: DataManager, category: Todo.Category? = nil) {
+    init(dataManager: DataManager) {
         self.dataManager = dataManager
-        self.category = category
         fetchTodos()
 
         self.dataManager.onUpdate = { [weak self] in
+            print(3)
             self?.objectWillChange.send()
+            print(4)
         }
     }
 
     func fetchTodos() {
-        let todos = dataManager.fetchTodoList()
-        if let category = category {
-            sectionedTodos = todos
-                .filter { category == $0.category }
-                .groupedBy(dateComponents: [.year, .month, .day])
-        } else {
-            sectionedTodos = todos
-                .filter { $0.date.isTodayOrLater }
-                .groupedBy(dateComponents: [.year, .month, .day])
-        }
+        sectionedTodos = dataManager.fetchTodoList()
     }
 
-    func todos(for key: Date) -> [Todo] {
-        return sectionedTodos[key]?.sorted() ?? []
+    func todos() -> [Todo] {
+        fetchTodos()
+        return sectionedTodos
+    }
+    
+    func totalDuration() -> Int {
+        fetchTodos()
+        return sectionedTodos.map {Int($0.duration)}.reduce(0, +)
+    }
+    
+    func delete(todo: Todo) {
+        dataManager.delete(todo: todo)
+        fetchTodos()
+        
     }
 
     func toggleIsCompleted(for todo: Todo) {
         dataManager.toggleIsCompleted(for: todo)
-        fetchTodos()
-    }
-
-    func toggleAlarm(for todo: Todo) {
-        guard !todo.date.isPast else { return }
-        dataManager.toggleIsAlarmSet(for: todo)
         fetchTodos()
     }
 }

@@ -12,11 +12,8 @@ extension TodoMO {
         Todo(
             id: uuid ?? UUID(),
             title: title ?? "Unknown",
-            isCompleted: isCompleted,
-            isAlarmSet: isAlarmSet,
-            category: Todo.Category.init(rawValue: category ?? Todo.Category.personal.rawValue) ?? .personal,
-            note: note ?? "",
-            date: date ?? Date()
+            duration: duration,
+            isCompleted: isCompleted
         )
     }
 }
