@@ -16,7 +16,6 @@
 		9490D2D724D9F13D00C300EB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9490D2D624D9F13D00C300EB /* Colors.xcassets */; };
 		9490D2D924D9F4DC00C300EB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2D824D9F4DC00C300EB /* Color+Extension.swift */; };
 		9490D2DC24DA011100C300EB /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2DB24DA011100C300EB /* Str.swift */; };
-		9490D2E124DA04AE00C300EB /* TodoGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2E024DA04AE00C300EB /* TodoGradient.swift */; };
 		9490D2E324DA159600C300EB /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2E224DA159600C300EB /* Font+Extension.swift */; };
 		9490D2E724DA1FB700C300EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2E424DA16D400C300EB /* MainView.swift */; };
 		9490D2E924DA1FD900C300EB /* MainViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9490D2E824DA1FD900C300EB /* MainViewRouter.swift */; };
@@ -53,11 +52,6 @@
 		B157440B28CCFE670052DF0E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157440A28CCFE670052DF0E /* CloseButton.swift */; };
 		B157441328CD2CF10052DF0E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441228CD2CF10052DF0E /* WidgetKit.framework */; };
 		B157441528CD2CF10052DF0E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441428CD2CF10052DF0E /* SwiftUI.framework */; };
-		B157441828CD2CF10052DF0E /* SandleakWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157441728CD2CF10052DF0E /* SandleakWidget.swift */; };
-		B157441B28CD2CF40052DF0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B157441A28CD2CF40052DF0E /* Assets.xcassets */; };
-		B157441D28CD2CF40052DF0E /* SandleakWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B157441928CD2CF10052DF0E /* SandleakWidget.intentdefinition */; };
-		B157441E28CD2CF40052DF0E /* SandleakWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B157441928CD2CF10052DF0E /* SandleakWidget.intentdefinition */; };
-		B157442128CD2CF40052DF0E /* WastedWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B177635028CCB20B005A80FF /* TimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177634F28CCB20B005A80FF /* TimeStats.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,28 +70,7 @@
 			remoteGlobalIDString = 9490D29E24D9E66500C300EB;
 			remoteInfo = TodoApp;
 		};
-		B157441F28CD2CF40052DF0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9490D29724D9E66500C300EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B157440F28CD2CF10052DF0E;
-			remoteInfo = WastedWidgetExtension;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		B157442528CD2CF40052DF0E /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B157442128CD2CF40052DF0E /* WastedWidgetExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9490D29F24D9E66500C300EB /* Sandleak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sandleak.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +88,6 @@
 		9490D2D624D9F13D00C300EB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = TodoApp/Colors.xcassets; sourceTree = SOURCE_ROOT; };
 		9490D2D824D9F4DC00C300EB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		9490D2DB24DA011100C300EB /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
-		9490D2E024DA04AE00C300EB /* TodoGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoGradient.swift; sourceTree = "<group>"; };
 		9490D2E224DA159600C300EB /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
 		9490D2E424DA16D400C300EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9490D2E824DA1FD900C300EB /* MainViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRouter.swift; sourceTree = "<group>"; };
@@ -155,10 +127,6 @@
 		B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WastedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B157441228CD2CF10052DF0E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B157441428CD2CF10052DF0E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		B157441728CD2CF10052DF0E /* SandleakWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandleakWidget.swift; sourceTree = "<group>"; };
-		B157441928CD2CF10052DF0E /* SandleakWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = SandleakWidget.intentdefinition; sourceTree = "<group>"; };
-		B157441A28CD2CF40052DF0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B157441C28CD2CF40052DF0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B177634F28CCB20B005A80FF /* TimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +172,6 @@
 				9490D2A124D9E66500C300EB /* Sandleak */,
 				9490D2B324D9E66700C300EB /* TodoAppTests */,
 				9490D2BE24D9E66700C300EB /* TodoAppUITests */,
-				B157441628CD2CF10052DF0E /* SandleakWidget */,
 				B157441128CD2CF10052DF0E /* Frameworks */,
 				9490D2A024D9E66500C300EB /* Products */,
 			);
@@ -316,7 +283,6 @@
 		9490D2DD24DA048800C300EB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				9490D2E024DA04AE00C300EB /* TodoGradient.swift */,
 				94C599FE24DF8381002635A7 /* RoundedCorners.swift */,
 				94C59A0924E0AB89002635A7 /* TextWrappedLayout.swift */,
 			);
@@ -444,17 +410,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B157441628CD2CF10052DF0E /* SandleakWidget */ = {
-			isa = PBXGroup;
-			children = (
-				B157441728CD2CF10052DF0E /* SandleakWidget.swift */,
-				B157441928CD2CF10052DF0E /* SandleakWidget.intentdefinition */,
-				B157441A28CD2CF40052DF0E /* Assets.xcassets */,
-				B157441C28CD2CF40052DF0E /* Info.plist */,
-			);
-			path = SandleakWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,12 +420,10 @@
 				9490D29B24D9E66500C300EB /* Sources */,
 				9490D29C24D9E66500C300EB /* Frameworks */,
 				9490D29D24D9E66500C300EB /* Resources */,
-				B157442528CD2CF40052DF0E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B157442028CD2CF40052DF0E /* PBXTargetDependency */,
 			);
 			name = Sandleak;
 			productName = TodoApp;
@@ -605,7 +558,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B157441B28CD2CF40052DF0E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +582,6 @@
 				B157440928CCEBD60052DF0E /* RegularButton.swift in Sources */,
 				94C59A1F24E20BA5002635A7 /* LocalNotificationManager.swift in Sources */,
 				B104A86628CC7768006C144F /* TaskCostView.swift in Sources */,
-				9490D2E124DA04AE00C300EB /* TodoGradient.swift in Sources */,
 				9490D2D324D9EFED00C300EB /* OnboardingView.swift in Sources */,
 				94C59A1B24E156BD002635A7 /* DependencyManager.swift in Sources */,
 				9490D2D124D9EE5F00C300EB /* TodoAppApp.swift in Sources */,
@@ -642,7 +593,6 @@
 				94C59A0424E095B0002635A7 /* TextFieldManager.swift in Sources */,
 				94C59A0124E09586002635A7 /* DataManager.swift in Sources */,
 				94C59A3224E4BB50002635A7 /* TaskListViewModel.swift in Sources */,
-				B157441E28CD2CF40052DF0E /* SandleakWidget.intentdefinition in Sources */,
 				9490D30E24DB96E500C300EB /* EnvironmentValues+Extension.swift in Sources */,
 				B104A86828CC78AC006C144F /* PickerManager.swift in Sources */,
 				94C599FF24DF8381002635A7 /* RoundedCorners.swift in Sources */,
@@ -679,8 +629,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B157441D28CD2CF40052DF0E /* SandleakWidget.intentdefinition in Sources */,
-				B157441828CD2CF10052DF0E /* SandleakWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,11 +644,6 @@
 			isa = PBXTargetDependency;
 			target = 9490D29E24D9E66500C300EB /* Sandleak */;
 			targetProxy = 9490D2BC24D9E66700C300EB /* PBXContainerItemProxy */;
-		};
-		B157442028CD2CF40052DF0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B157440F28CD2CF10052DF0E /* WastedWidgetExtension */;
-			targetProxy = B157441F28CD2CF40052DF0E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -824,12 +767,11 @@
 		9490D2C524D9E66700C300EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sandleak/Sandleak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Sandleak/Preview Content\"";
 				DEVELOPMENT_TEAM = WLF4K799KP;
 				ENABLE_PREVIEWS = YES;
@@ -850,12 +792,11 @@
 		9490D2C624D9E66700C300EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Sandleak/Sandleak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Sandleak/Preview Content\"";
 				DEVELOPMENT_TEAM = WLF4K799KP;
 				ENABLE_PREVIEWS = YES;
@@ -965,7 +906,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = WastedWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WLF4K799KP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SandleakWidget/Info.plist;
@@ -983,7 +924,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -995,7 +936,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_ENTITLEMENTS = WastedWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WLF4K799KP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SandleakWidget/Info.plist;
@@ -1013,7 +954,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

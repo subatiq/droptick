@@ -13,6 +13,7 @@ extension TodoMO {
             id: uuid ?? UUID(),
             title: title ?? "Unknown",
             duration: duration,
+            createdAt: createdAt ?? Date.now,
             isCompleted: isCompleted
         )
     }

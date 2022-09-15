@@ -48,7 +48,7 @@ struct TaskTitleView: View {
     }()
     
     enum FocusField: Hashable {
-        case title, duration
+        case title, none
       }
 
     @FocusState private var focusedField: FocusField?
@@ -56,11 +56,11 @@ struct TaskTitleView: View {
     var body: some View {
         VStack(alignment: .center) {
             if !submitted {
-            Text("What have you done?")
-                .multilineTextAlignment(.center)
-                .font(.system(size: 16, weight: .medium))
-                .foregroundColor(Color.gray)
-                .padding(.bottom)
+                Text("What have you done?")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(Color.gray)
+                    .padding(.bottom)
             }
             TextField("", text: $userInput, onEditingChanged: { (editingChanged) in
                 if editingChanged {
@@ -72,47 +72,56 @@ struct TaskTitleView: View {
                     if userInput.count > 0 {
                         submitted = true
                     }
-                    focusedField = .duration
+                    focusedField = TaskTitleView.FocusField.none
                 }
             })
                 .frame(height: 60)
                 .background(Color.gray.opacity(submitted ? 0 : 0.1).cornerRadius(10))
                 .font(.system(size: 26, weight: .black))
+                .focused($focusedField, equals: .title)
                 .multilineTextAlignment(.center)
                 .padding(.leading)
                 .padding(.trailing)
-                .focused($focusedField, equals: .title)
                 .onSubmit {
                     submitted = true
-                    focusedField = .duration
+                    focusedField = TaskTitleView.FocusField.none
                 }
-//
-//            Text("Minutes duration")
-//                .multilineTextAlignment(.center)
-//                .font(.system(size: 16, weight: .medium))
-//                .foregroundColor(Color.gray)
-//                .padding(.bottom)
-//
-//            TextField("xxxx", value: $duration, formatter: HoursAndMinutesFormatter())
-//                .keyboardType(.numberPad)
-//                .frame(height: 60)
-//                .background(Color.gray.opacity(0.1).cornerRadius(10))
-//                .font(.system(size: 26, weight: .black))
-//                .foregroundColor(.black)
-//                .multilineTextAlignment(.center)
-//                .padding(.leading)
-//                .padding(.trailing)
-//                .focused($focusedField, equals: .duration)
                 
+                
+
+            if !submitted {
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(["Work", "Watch TV", "Eat", "Excercise"], id: \.self) {activity  in
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                                    .frame(height: 40)
+                                    .foregroundColor(Color.gray.opacity(0.1))
+                                Text(activity)
+                                    .foregroundColor(.gray.opacity(0.7))
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.leading)
+                                    .padding(.trailing)
+                            }
+                            .onTapGesture {
+                                userInput = activity
+                                submitted = true
+                                focusedField = nil
+                            }
+                        }
+                    }
+                }
+                .padding()
+            }
+            
         }
         .onAppear {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {  /// Anything over 0.5 seems to work
-                    self.focusedField = .title
-                    self.submitted = false
-//               }
+            self.focusedField = .title
+            self.submitted = false
         }
         .onDisappear {
-            self.focusedField = .duration
+            self.focusedField = TaskTitleView.FocusField.none
         }
     }
 }

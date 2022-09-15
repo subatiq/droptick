@@ -44,8 +44,6 @@ struct OnboardingView: View {
                 }
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
                 .foregroundColor(.white)
-                .background(TodoGradient().cornerRadius(10))
-                .shadow(color: Color.shadowColor, radius: 10, x: 0, y: 5)
 
                 Spacer()
 
@@ -54,7 +52,7 @@ struct OnboardingView: View {
             .edgesIgnoringSafeArea(.bottom)
 
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        .background(Color.backgroundColor)
+            .background(Color.backgroundColor)
         .edgesIgnoringSafeArea(.all)
     }
 }

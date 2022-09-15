@@ -9,6 +9,7 @@ import Foundation
 
 protocol NewTaskViewModelProtocol {
     func addNewTask(todo: Todo)
+    func todos() -> [Todo]
 }
 
 final class NewTaskViewModel: ObservableObject {
@@ -24,4 +25,10 @@ extension NewTaskViewModel: NewTaskViewModelProtocol {
     func addNewTask(todo: Todo) {
         dataManager.add(todo: todo)
     }
+    
+    func todos() -> [Todo] {
+        return dataManager.fetchTodoList().sorted(by: {$0.createdAt > $1.createdAt})
+    }
+    
+    
 }

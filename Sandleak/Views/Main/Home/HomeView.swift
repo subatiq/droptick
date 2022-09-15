@@ -13,22 +13,17 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
-            
-            GeometryReader { geometry in
-                Group {
-                    if viewModel.sectionedTodos.isEmpty {
-                        NoTaskView()
-                            .frame(width: geometry.size.width, height: geometry.size.height)
-                    } else {
-                        TaskListView(viewModel: viewModel)
-                    }
+                if viewModel.sectionedTodos.isEmpty {
+                    Spacer()
+                    NoTaskView()
+                    Spacer()
+                } else {
+                    TaskListView(viewModel: viewModel)
                 }
-            }
-            .onAppear {
-                viewModel.fetchTodos()
-            }
         }
-       
+        .onAppear {
+            viewModel.fetchTodos()
+        }
     }
 }
 

@@ -11,6 +11,7 @@ struct Todo {
     var id = UUID()
     let title: String
     let duration: Int16
+    var createdAt: Date
     var isCompleted = false
 }
 

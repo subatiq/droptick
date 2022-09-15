@@ -31,9 +31,7 @@ final class TaskListViewModel: ObservableObject, TaskListViewModelProtocol {
         fetchTodos()
 
         self.dataManager.onUpdate = { [weak self] in
-            print(3)
             self?.objectWillChange.send()
-            print(4)
         }
     }
 
@@ -43,7 +41,7 @@ final class TaskListViewModel: ObservableObject, TaskListViewModelProtocol {
 
     func todos() -> [Todo] {
         fetchTodos()
-        return sectionedTodos
+        return sectionedTodos.sorted(by: { $0.createdAt > $1.createdAt })
     }
     
     func totalDuration() -> Int {

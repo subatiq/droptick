@@ -11,21 +11,8 @@ extension Color {
     static let backgroundColor = Color("backgroundColor")
     static let primaryTextColor = Color("primaryTextColor")
     static let infoColor = Color("infoColor")
-    static let lightGreen = Color(hex: "91DC5A")
-    static let lightYellow = Color(hex: "FFDC00")
-    static let reminderViewBackgroundColor = Color("reminderViewBackgroundColor")
-
-    static let todoGradientFirstColor = Color("todoGradientFirstColor")
-    static let todoGradientSecondColor = Color("todoGradientSecondColor")
-    static let todoHeaderGradientFirstColor = Color("todoHeaderGradientFirstColor")
-    static let todoHeaderGradientSecondColor = Color("todoHeaderGradientSecondColor")
-
-
-    static let shadowColor = Color(hex: "66C81C")
-    static let addTaskButtonColor = Color(hex: "E0139C")
-    static let addTaskButtonShadowColor = Color("addTaskButtonShadowColor")
-    static let sectionTitleColor = Color(hex: "8B87B3")
-    static let rowColor = Color("rowColor")
+    static let accent = Color("AccentColor")
+    static let second = Color("secondColor")
 }
 
 extension Color {

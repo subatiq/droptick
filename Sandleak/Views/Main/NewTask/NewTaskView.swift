@@ -49,43 +49,51 @@ struct NewTaskView: View {
     }
 
     var body: some View {
-//        GeometryReader { geometry in
         VStack {
             Spacer()
             
             VStack(alignment: .leading) {
+                VStack {
                     TaskTitleView(userInput: $textFieldManager.userInput, duration: .constant(0), submitted: $nameEntered)
+                }
+                    
                 if nameEntered {
-                    TaskCostView(taskTitle: textFieldManager.userInput, userInput: $costPickerManager.userInput)
+                    TaskCostView(taskTitle: textFieldManager.userInput, userInput: $costPickerManager.userInput, viewModel: viewModel)
                 }
             }
 
-                Spacer()
-                
-                if self.canCreateTask {
+            Spacer()
+            
+            if self.canCreateTask {
+                HStack {
+                    VStack {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .frame(width: 60, height: 60)
+                                .foregroundColor(.gray.opacity(0.1))
+                            CloseButton(action: {
+                                onComplete()
+                            })
+                            .frame(width: 60, height: 60)
+                            
+                        }
+                        
+                    }
                     RegularButton(
                         text: "Create",
                         action: {
-                        createTask()
-                        onComplete()
-                    })
-
+                            createTask()
+                            onComplete()
+                        })
+                    
                 }
-                else {
-                    CloseButton(action: {
-                        
-                        onComplete()
-                    })
-                }
-            
-//            else if creationStep.currentStep == 0 {
-//                Button(Str.Main.NewTask.nextStep) {
-//                    self.creationStep.increment()
-//                }
-//                .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 10))
-//                .foregroundColor(.white)
-//                .background(Color.addTaskButtonColor.cornerRadius(5).opacity(0.9))
-//            }
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+            else {
+                CloseButton(action: {
+                    onComplete()
+                })
+            }
         }
         .background(Color.backgroundColor)
         .onTapGesture {
@@ -102,7 +110,7 @@ struct NewTaskView: View {
         let title = textFieldManager.userInput
         let duration = costPickerManager.userInput
 
-        let todo = Todo(title: title, duration: duration)
+        let todo = Todo(title: title, duration: duration, createdAt: Date.now)
         viewModel.addNewTask(todo: todo)
         presentationMode.wrappedValue.dismiss()
     }

@@ -21,7 +21,7 @@ struct CloseButton: View {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .opacity(0)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                .frame(width: UIScreen.main.bounds.width, height: 60)
+                .frame(height: 60)
             Image(systemName: "xmark")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(.gray.opacity(0.3))

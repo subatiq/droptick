@@ -39,10 +39,10 @@ struct TimeStats: View {
         VStack {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Minutes today".uppercased())
+                    Text("Minutes left today".uppercased())
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.gray)
-                    Text("\(String(minutesToday))")
+                    Text("\(String(1440 - minutesToday))")
                         .font(.system(size: 20, weight: .bold))
                         .padding(.bottom, 5)
                     Text("Sleep time".uppercased())
@@ -54,23 +54,18 @@ struct TimeStats: View {
                 }
                 .multilineTextAlignment(.leading)
                 .padding(.leading, 15)
-//                .padding(.top, 10)
                 Spacer()
                 VStack(alignment: .trailing) {
                     Text("Minutes unused".uppercased())
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.gray)
-//                        .frame(width: 200)
                     HStack(alignment: .bottom) {
                         Text(String(totalTimePassed))
                             .font(.system(size: 50, weight: .black))
-//                            .padding(.trailing, 20)
                     }
                     Text(":\(String(format: "%02d",secondsLeft))")
                         .font(.system(size: 30, weight: .black))
                         .foregroundColor(.gray.opacity(0.5))
-//                        .padding(.bottom, 5)
-                        
                     
                 }
                 .multilineTextAlignment(.trailing)
@@ -80,13 +75,20 @@ struct TimeStats: View {
             .onReceive(viewModel.objectWillChange) { _ in
                 self.viewModel.fetchTodos()
                 totalTimePassed = Date().minutesSinceMidnight - viewModel.totalDuration() - timeLeft.sleepTime
-//                print("TRIG")
             }
             .onAppear {
                 self.viewModel.fetchTodos()
                 totalTimePassed = Date().minutesSinceMidnight - viewModel.totalDuration() - timeLeft.sleepTime
             }
             .onReceive(timer) {date in
+                for todo in self.viewModel.todos() {
+                    if todo.createdAt < Date.now.startOfCurrentDay {
+                        viewModel.delete(todo: todo)
+                    }
+                }
+                
+                _ = readSleep(from: Calendar(identifier: .iso8601).startOfDay(for: Date.now), to: Date.now)
+                
                 self.viewModel.fetchTodos()
                 secondsLeft = Date().secondsSinceMidnight - 60 * Date().minutesSinceMidnight
                 minutesToday = Date().minutesSinceMidnight
@@ -94,7 +96,6 @@ struct TimeStats: View {
                 
                 UserDefaults(suiteName: "group.com.subatiq.sandleak")?.set(viewModel.totalDuration(), forKey: "totalTimeUsed")
                 UserDefaults(suiteName: "group.com.subatiq.sandleak")?.set(timeLeft.sleepTime, forKey: "sleepTime")
-//                self.totalTimePassed = Date().minutesSinceMidnight
             }
         }
         

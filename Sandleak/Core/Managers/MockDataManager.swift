@@ -27,12 +27,12 @@ class MockDataManager: DataManager {
 
     init() {
         todos = [
-            Todo(id: UUID(), title: "Good day", duration: 100, isCompleted: false),
-            Todo(id: UUID(), title: "Fetch water from well", duration: 100, isCompleted: false),
-            Todo(id: UUID(), title: "Go outside", duration: 100, isCompleted: false),
-            Todo(id: UUID(), title: "Morning workout", duration: 100, isCompleted: false),
-            Todo(id: UUID(), title: "Sign documents", duration: 100, isCompleted: false),
-            Todo(id: UUID(), title: "Check email", duration: 100, isCompleted: true),
+            Todo(id: UUID(), title: "Good day", duration: 100, createdAt: .now, isCompleted: false),
+            Todo(id: UUID(), title: "Fetch water from well", duration: 100, createdAt: .now, isCompleted: false),
+            Todo(id: UUID(), title: "Go outside", duration: 100, createdAt: .now, isCompleted: false),
+            Todo(id: UUID(), title: "Morning workout", duration: 100, createdAt: .now, isCompleted: false),
+            Todo(id: UUID(), title: "Sign documents", duration: 100, createdAt: .now, isCompleted: false),
+            Todo(id: UUID(), title: "Check email", duration: 100, createdAt: .now, isCompleted: true),
         ]
     }
 
@@ -41,7 +41,7 @@ class MockDataManager: DataManager {
     }
 
     func add(todo: Todo) {
-        todos.append(Todo(title: todo.title, duration: todo.duration))
+        todos.append(Todo(title: todo.title, duration: todo.duration, createdAt: .now))
         onUpdate?()
     }
 

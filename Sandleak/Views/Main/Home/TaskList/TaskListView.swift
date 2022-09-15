@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct TaskListView: View {
 
     @ObservedObject var viewModel: TaskListViewModel
@@ -15,29 +16,33 @@ struct TaskListView: View {
     private let generator = UINotificationFeedbackGenerator()
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                ForEach(self.viewModel.todos(), id: \.id) { todo in
-                    TaskCell(todo: todo, onToggleCompletedTask: {
-                        self.viewModel.dataManager.delete(todo: todo)
-                    })
-                    .padding(.bottom, 2)
-                }
+        List {
+            ForEach(self.viewModel.todos(), id: \.id) { todo in
+                TaskCell(todo: todo, onToggleCompletedTask: {
+                    self.viewModel.dataManager.delete(todo: todo)
+                })
             }
-            .rotationEffect(Angle(degrees: 180))
-                .background(Color.backgroundColor)
+            .onDelete(perform: deleteTask)
         }
-        .rotationEffect(Angle(degrees: 180))
+        
+        .listStyle(PlainListStyle())
         .navigationTitle(Text(title ?? ""))
         .background(Color.backgroundColor)
-        .padding(.leading, 8)
-        .padding(.trailing, 8)
         .onAppear {
             self.viewModel.fetchTodos()
         }
         .onReceive(viewModel.objectWillChange) { _ in
             self.viewModel.fetchTodos()
         }
+    }
+    
+    func deleteTask(indexSet: IndexSet) -> Void {
+        let todos = self.viewModel.todos()
+        indexSet.forEach { (i) in
+            let todo = todos[i]
+            self.viewModel.dataManager.delete(todo: todo)
+        }
+        
     }
 }
 

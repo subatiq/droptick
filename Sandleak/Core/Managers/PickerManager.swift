@@ -13,9 +13,9 @@ class PickerManager: ObservableObject {
 
     @Published var userInput: Int = 0 {
         didSet {
-            if userInput > maxValue || userInput < minValue {
-                AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) { return }
-            }
+//            if userInput > maxValue || userInput < minValue {
+//                AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) { return }
+//            }
             
         }
     }
@@ -24,9 +24,9 @@ class PickerManager: ObservableObject {
 class DurationPickerManager: ObservableObject {
     @Published var userInput: Int16 = 0 {
         didSet {
-            if userInput == 0 {
-                AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) { return }
-            }
+//            if userInput == 0 {
+//                AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(kSystemSoundID_Vibrate)) { return }
+//            }
             
         }
     }

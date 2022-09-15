@@ -58,9 +58,7 @@ func readSleep(from startDate: Date?, to endDate: Date?) -> Int {
                     else {
                         return
                     }
-                    print("\(sample.startDate) : \(sample.endDate)")
                     totalInterval += Int(sample.endDate.timeIntervalSince(sample.startDate) / 60)
-                    print(totalInterval)
                 })
             UserDefaults.standard.set(totalInterval, forKey: "SleepToday")
         }
@@ -111,19 +109,14 @@ struct MainView: View {
                         },
                         viewModel: newTaskModel)
                     }
-                }.padding(.bottom, 20)
+                }
+                .padding(.bottom, 20)
             }
             .background(Color.backgroundColor)
             .onAppear {
                 requestSleepAuthorization()
-                print(readSleep(from: Calendar(identifier: .iso8601).startOfDay(for: Date.now), to: Date.now))
+                _ = readSleep(from: Calendar(identifier: .iso8601).startOfDay(for: Date.now), to: Date.now)
             }
-    }
-    
-    func updateTimeStats() -> Void {
-        // FIXME: This is some stupid ass shit
-//        print("DSFSDF")
-//        timeStatsModel.update(dataManager: dataManager)
     }
 }
 

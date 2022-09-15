@@ -45,6 +45,7 @@ extension TodoDataManager: DataManager {
         newTodo.uuid = UUID()
         newTodo.title = todo.title
         newTodo.duration = todo.duration
+        newTodo.createdAt = todo.createdAt
         newTodo.isCompleted = false
         persistentManager.create(newTodo)
 
@@ -62,9 +63,7 @@ extension TodoDataManager: DataManager {
     
     func delete(todo: Todo) {
         guard let todoMO = getTodoMO(for: todo) else { return }
-        print(1)
         persistentManager.delete(todoMO)
-        print(2)
 
         onUpdate?()
     }
