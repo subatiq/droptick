@@ -26,6 +26,17 @@ extension NewTaskViewModel: NewTaskViewModelProtocol {
         dataManager.add(todo: todo)
     }
     
+    func updateTask(todo: Todo) {
+        let originalTodo = todos().first{$0.title == todo.title}
+        print("HERE", originalTodo)
+        if originalTodo == nil {
+            addNewTask(todo: todo)
+        }
+        else {
+            dataManager.update(todo: todo, originalTodo: originalTodo!)
+        }
+    }
+    
     func todos() -> [Todo] {
         return dataManager.fetchTodoList().sorted(by: {$0.createdAt > $1.createdAt})
     }

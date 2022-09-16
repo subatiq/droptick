@@ -10,7 +10,7 @@ import SwiftUI
 
 
 class TimeStatsModel: ObservableObject {
-    let sleepTime: Int = UserDefaults.standard.integer(forKey: "SleepToday")
+    @Published var sleepTime: Int = UserDefaults.standard.integer(forKey: "SleepToday")
 }
 
 
@@ -28,11 +28,13 @@ extension Date {
 
 
 struct TimeStats: View {
-    var timeLeft: TimeStatsModel = TimeStatsModel()
+    @ObservedObject var timeLeft: TimeStatsModel = TimeStatsModel()
     let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
+    
     @State var secondsLeft: Int = Date().secondsSinceMidnight - 60 * Date().minutesSinceMidnight
     @State var minutesToday = Date().minutesSinceMidnight
     @State var totalTimePassed: Int = Date().minutesSinceMidnight
+    
     @ObservedObject var viewModel: TaskListViewModel
     
     var body: some View {
@@ -88,6 +90,7 @@ struct TimeStats: View {
                 }
                 
                 _ = readSleep(from: Calendar(identifier: .iso8601).startOfDay(for: Date.now), to: Date.now)
+                timeLeft.sleepTime = UserDefaults.standard.integer(forKey: "SleepToday")
                 
                 self.viewModel.fetchTodos()
                 secondsLeft = Date().secondsSinceMidnight - 60 * Date().minutesSinceMidnight

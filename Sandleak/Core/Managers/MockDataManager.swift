@@ -44,6 +44,10 @@ class MockDataManager: DataManager {
         todos.append(Todo(title: todo.title, duration: todo.duration, createdAt: .now))
         onUpdate?()
     }
+    
+    func update(todo: Todo, originalTodo: Todo) {
+        print("NOT IMPLEMENTED")
+    }
 
     func toggleIsCompleted(for todo: Todo) {
         if let index = todos.firstIndex(where: { $0 == todo }) {

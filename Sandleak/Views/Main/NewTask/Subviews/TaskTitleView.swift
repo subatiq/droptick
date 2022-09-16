@@ -87,8 +87,6 @@ struct TaskTitleView: View {
                     focusedField = TaskTitleView.FocusField.none
                 }
                 
-                
-
             if !submitted {
                 ScrollView(.horizontal) {
                     HStack {

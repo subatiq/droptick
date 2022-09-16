@@ -21,7 +21,7 @@ struct TaskCell: View {
                         Text(todo.title)
                             .strikethrough(todo.isCompleted)
                             .font(.system(size: 16 , weight: .bold))
-                            .opacity(0.8)
+                            .opacity(0.75)
                     }
 
                     Spacer()
@@ -29,8 +29,13 @@ struct TaskCell: View {
                     VStack(alignment: .trailing) {
                         HStack {
                             Image(systemName: "hourglass.bottomhalf.filled")
-                                .font(.system(size: 10, weight: .bold))
-                            Text("\(todo.duration)m")
+                                .font(.system(size: 14, weight: .bold))
+                            VStack {
+                                Text(String(format: "%d m", todo.duration))
+                                Text(String(format: "(%d%%)", Int(todo.duration * 100 / 1440)))
+                                    .opacity(0.8)
+                                    .font(.system(size: 14, weight: .bold))
+                            }
                         }
                         .foregroundColor(.accent)
                         .font(.system(size: 16, weight: .bold))

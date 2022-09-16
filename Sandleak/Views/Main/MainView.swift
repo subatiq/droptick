@@ -24,6 +24,7 @@ func requestSleepAuthorization() {
         }
     }
 }
+       
 
 func readSleep(from startDate: Date?, to endDate: Date?) -> Int {
     let healthStore = HKHealthStore()
@@ -40,6 +41,8 @@ func readSleep(from startDate: Date?, to endDate: Date?) -> Int {
     let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierEndDate, ascending: false)
 
     var totalInterval: Int = 0
+    var totalSleepInterval: Int = 0
+    var totalInBedInterval: Int = 0
     
     // we create our query with a block completion to execute
     let query = HKSampleQuery(sampleType: sleepType, predicate: predicate, limit: 30, sortDescriptors: [sortDescriptor]) { (query, result, error) in
@@ -53,13 +56,19 @@ func readSleep(from startDate: Date?, to endDate: Date?) -> Int {
             result
                 .compactMap({ $0 as? HKCategorySample })
                 .forEach({ sample in
-                    guard let sleepValue = HKCategoryValueSleepAnalysis(rawValue: sample.value),
-                          sleepValue == .asleep
+                    guard let sleepValue = HKCategoryValueSleepAnalysis(rawValue: sample.value)
                     else {
                         return
                     }
-                    totalInterval += Int(sample.endDate.timeIntervalSince(sample.startDate) / 60)
+                    if (sleepValue == .asleep) {
+                        totalSleepInterval += Int(sample.endDate.timeIntervalSince(sample.startDate) / 60)
+                        
+                    }
+                    else if (sleepValue == .inBed) {
+                        totalInBedInterval += Int(sample.endDate.timeIntervalSince(sample.startDate) / 60)
+                    }
                 })
+            totalInterval = totalSleepInterval > 0 ? totalSleepInterval : totalInBedInterval
             UserDefaults.standard.set(totalInterval, forKey: "SleepToday")
         }
     }
@@ -78,13 +87,12 @@ extension View {
 }
 
 struct MainView: View {
-
     @State var currentRoute: MainViewRouter.Route = .home
     @State var showNewTaskView = false
 
     var viewModel: TaskListViewModel
     var newTaskModel: NewTaskViewModel
-//    var dataManager = TodoDataManager()
+    
     init() {
         let dataManager = TodoDataManager()
         self.viewModel = TaskListViewModel(dataManager: dataManager)
@@ -93,26 +101,26 @@ struct MainView: View {
     
 
     var body: some View {
-            GeometryReader { geometry in
-                VStack {
-                    TimeStats(viewModel: viewModel)
-                    if (!showNewTaskView) {
+            VStack {
+                TimeStats(viewModel: viewModel)
+                switch currentRoute {
+                case .home:
+                    VStack {
                         HomeView(viewModel: viewModel)
-                        MainTabBar(size: geometry.size, currentRoute: $currentRoute) {
-                            self.showNewTaskView.toggle()
-                        }
+                        MainTabBar(
+                            lastMarker: Date.now,
+                            currentRoute: $currentRoute
+                        )
                     }
-                    else {
-                        NewTaskView(onComplete: {
-                            showNewTaskView = false
-                            hideKeyboard()
-                        },
-                        viewModel: newTaskModel)
-                    }
+                case .newTask:
+                    NewTaskView(onComplete: {
+                        currentRoute = .home
+                        hideKeyboard()
+                    },
+                    viewModel: newTaskModel)
                 }
-                .padding(.bottom, 20)
             }
-            .background(Color.backgroundColor)
+            .padding(.bottom, 20)
             .onAppear {
                 requestSleepAuthorization()
                 _ = readSleep(from: Calendar(identifier: .iso8601).startOfDay(for: Date.now), to: Date.now)

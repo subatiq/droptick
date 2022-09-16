@@ -51,6 +51,14 @@ extension TodoDataManager: DataManager {
 
         onUpdate?()
     }
+    
+    func update(todo: Todo, originalTodo: Todo) {
+        guard let todoMO = getTodoMO(for: originalTodo) else { return }
+        todoMO.duration += todo.duration
+        persistentManager.update(todoMO)
+
+        onUpdate?()
+    }
 
     func toggleIsCompleted(for todo: Todo) {
         guard let todoMO = getTodoMO(for: todo) else { return }

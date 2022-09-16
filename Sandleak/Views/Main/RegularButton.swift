@@ -20,13 +20,18 @@ struct RegularButton: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .foregroundColor(.accent.opacity(tapped ? 0.9 : 1))
+                .foregroundColor(.yellow.opacity(0.2))
+                .scaleEffect(tapped ? 1.5 : 1)
+                .opacity(tapped ? 1 : 0)
+                .frame(height: 60)
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .foregroundColor(tapped ? .white : .accent.opacity(tapped ? 0.9 : 1))
                 .frame(height: 60)
             Text(text.uppercased())
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.black.opacity(0.9))
         }
-        .scaleEffect(tapped ? 0.98 : 1)
+        .scaleEffect(tapped ? 1.1 : 1)
         .animation(.spring(response: 0.4, dampingFraction: 0.9))
         .onTapGesture {
             action()

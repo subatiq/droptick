@@ -11,7 +11,7 @@ class MainViewRouter: ObservableObject {
 
     enum Route {
         case home
-        case tasks
+        case newTask
     }
 
     @Published var currentRoutes: Route = .home

@@ -70,14 +70,14 @@ struct TaskCostView: View {
     @State var selection: [Int16] = [0, 0]
 
     var body: some View {
-        VStack(alignment: .center) {
+        VStack {
             Text("How much time did it take?")
                 .multilineTextAlignment(.center)
                 .font(.system(size: 20, weight: .medium))
                 .foregroundColor(Color.gray.opacity(0.5))
                 .padding(.bottom)
 
-            VStack(alignment: .center) {
+            VStack {
                 Text(verbatim: "\(userInput)")
                     .fontWeight(.black)
                     .font(.system(size: 48))
@@ -85,14 +85,15 @@ struct TaskCostView: View {
                     .fontWeight(.black)
                     .font(.system(size: 20))
                     .foregroundColor(Color.gray)
+                GeometryReader {geometry in
                     MultiPicker(data: data, selection: $selection).frame(height: 300)
                         .onChange(of: selection) {
                             _ in
                             userInput = selection[0] * 60 + selection[1]
-                    }
-                        .frame(height: manualMode ? .infinity : 0)
+                        }
+                        .frame(height: manualMode ? geometry.size.height : 0)
                         .opacity(manualMode ? 1 : 0)
-                
+                }
             }
             HStack {
                 if minutesSinceLastTask() != nil && minutesSinceLastTask()! > 0 {

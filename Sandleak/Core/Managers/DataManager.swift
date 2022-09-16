@@ -11,6 +11,7 @@ protocol DataManager {
     var onUpdate: (() -> Void)? { get set }
     func fetchTodoList() -> [Todo]
     func add(todo: Todo)
+    func update(todo: Todo, originalTodo: Todo)
     func delete(todo: Todo)
     func toggleIsCompleted(for todo: Todo)
 }

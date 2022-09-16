@@ -95,7 +95,6 @@ struct NewTaskView: View {
                 })
             }
         }
-        .background(Color.backgroundColor)
         .onTapGesture {
             UIApplication.shared
                 .sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
@@ -104,6 +103,7 @@ struct NewTaskView: View {
             UITextView.appearance().backgroundColor = .clear
             UITableView.appearance().backgroundColor = .clear
         }
+        .animation(nil, value: UUID())
     }
 
     func createTask() {
@@ -111,7 +111,7 @@ struct NewTaskView: View {
         let duration = costPickerManager.userInput
 
         let todo = Todo(title: title, duration: duration, createdAt: Date.now)
-        viewModel.addNewTask(todo: todo)
+        viewModel.updateTask(todo: todo)
         presentationMode.wrappedValue.dismiss()
     }
 }

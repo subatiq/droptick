@@ -52,6 +52,8 @@
 		B157440B28CCFE670052DF0E /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B157440A28CCFE670052DF0E /* CloseButton.swift */; };
 		B157441328CD2CF10052DF0E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441228CD2CF10052DF0E /* WidgetKit.framework */; };
 		B157441528CD2CF10052DF0E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B157441428CD2CF10052DF0E /* SwiftUI.framework */; };
+		B15CEBC628D524B300925A95 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CEBC528D524B300925A95 /* Bookmark.swift */; };
+		B15CEBC828D52D4E00925A95 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15CEBC728D52D4E00925A95 /* MainButton.swift */; };
 		B177635028CCB20B005A80FF /* TimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177634F28CCB20B005A80FF /* TimeStats.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +129,8 @@
 		B157441028CD2CF10052DF0E /* WastedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WastedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B157441228CD2CF10052DF0E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B157441428CD2CF10052DF0E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B15CEBC528D524B300925A95 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		B15CEBC728D52D4E00925A95 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		B177634F28CCB20B005A80FF /* TimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +238,7 @@
 		9490D2CD24D9EDDB00C300EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B15CEBC428D523BA00925A95 /* Base */,
 				9490D2E624DA1FA600C300EB /* Main */,
 			);
 			path = Views;
@@ -410,6 +415,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B15CEBC428D523BA00925A95 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B15CEBC528D524B300925A95 /* Bookmark.swift */,
+				B15CEBC728D52D4E00925A95 /* MainButton.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -572,6 +586,7 @@
 				9490D2EB24DA222C00C300EB /* MainTabBar.swift in Sources */,
 				94C59A0224E0958A002635A7 /* MockDataManager.swift in Sources */,
 				94C59A0C24E0BE50002635A7 /* NewTaskViewModel.swift in Sources */,
+				B15CEBC828D52D4E00925A95 /* MainButton.swift in Sources */,
 				9490D2E924DA1FD900C300EB /* MainViewRouter.swift in Sources */,
 				94C59A3424E4C28F002635A7 /* TodoDataManager.swift in Sources */,
 				B157440B28CCFE670052DF0E /* CloseButton.swift in Sources */,
@@ -603,6 +618,7 @@
 				9490D2E324DA159600C300EB /* Font+Extension.swift in Sources */,
 				9490D31A24DBA40800C300EB /* TaskCell.swift in Sources */,
 				9490D30524DB11EE00C300EB /* PersistenceManager.swift in Sources */,
+				B15CEBC628D524B300925A95 /* Bookmark.swift in Sources */,
 				9490D2FD24DAD9F800C300EB /* TodoMO+Extension.swift in Sources */,
 				94C59A0F24E0C979002635A7 /* TaskTitleView.swift in Sources */,
 				9490D2D924D9F4DC00C300EB /* Color+Extension.swift in Sources */,
