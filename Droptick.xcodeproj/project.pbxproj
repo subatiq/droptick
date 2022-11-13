@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13CF5B62920FCE20043C750 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CF5B52920FCE20043C750 /* Color.swift */; };
+		B1B4312229201B910094E1A6 /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4312129201B910094E1A6 /* CreateTask.swift */; };
 		B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742C291FEED6002C7086 /* DroptickApp.swift */; };
 		B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742E291FEED6002C7086 /* Persistence.swift */; };
 		B1CE7432291FEED6002C7086 /* Droptick.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7430291FEED6002C7086 /* Droptick.xcdatamodeld */; };
@@ -16,6 +18,17 @@
 		B1CE7444291FEED9002C7086 /* DroptickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7443291FEED9002C7086 /* DroptickTests.swift */; };
 		B1CE744E291FEED9002C7086 /* DroptickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE744D291FEED9002C7086 /* DroptickUITests.swift */; };
 		B1CE7450291FEED9002C7086 /* DroptickUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */; };
+		B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */; };
+		B1CE7461291FF096002C7086 /* TimeTracker+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */; };
+		B1CE7464291FFD17002C7086 /* TasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7463291FFD17002C7086 /* TasksList.swift */; };
+		B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7469291FFF49002C7086 /* ControlBar.swift */; };
+		B1CE746D291FFFEB002C7086 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE746C291FFFEB002C7086 /* ButtonStyles.swift */; };
+		B1CE746F2920018A002C7086 /* TimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE746E2920018A002C7086 /* TimeStats.swift */; };
+		B1CE7471292001DF002C7086 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7470292001DF002C7086 /* TimeConverter.swift */; };
+		B1DFD5C42920250F00F6CCD2 /* TimeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DFD5C32920250F00F6CCD2 /* TimeInputView.swift */; };
+		B1F433E8292161A400AE2A78 /* TaskDB+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433E7292161A400AE2A78 /* TaskDB+Extension.swift */; };
+		B1F433F72921A1AC00AE2A78 /* TimeTracker+Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433F62921A1AC00AE2A78 /* TimeTracker+Repository.swift */; };
+		B1F433F92921A26B00AE2A78 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F433F82921A26B00AE2A78 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B13CF5B52920FCE20043C750 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B1B4312129201B910094E1A6 /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 		B1CE7429291FEED6002C7086 /* Droptick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Droptick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CE742C291FEED6002C7086 /* DroptickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickApp.swift; sourceTree = "<group>"; };
 		B1CE742E291FEED6002C7086 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +64,17 @@
 		B1CE7449291FEED9002C7086 /* DroptickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroptickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CE744D291FEED9002C7086 /* DroptickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickUITests.swift; sourceTree = "<group>"; };
 		B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+Model.swift"; sourceTree = "<group>"; };
+		B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+ViewModel.swift"; sourceTree = "<group>"; };
+		B1CE7463291FFD17002C7086 /* TasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
+		B1CE7469291FFF49002C7086 /* ControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
+		B1CE746C291FFFEB002C7086 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		B1CE746E2920018A002C7086 /* TimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStats.swift; sourceTree = "<group>"; };
+		B1CE7470292001DF002C7086 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
+		B1DFD5C32920250F00F6CCD2 /* TimeInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInputView.swift; sourceTree = "<group>"; };
+		B1F433E7292161A400AE2A78 /* TaskDB+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskDB+Extension.swift"; sourceTree = "<group>"; };
+		B1F433F62921A1AC00AE2A78 /* TimeTracker+Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+Repository.swift"; sourceTree = "<group>"; };
+		B1F433F82921A26B00AE2A78 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +102,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B13CF5B42920FCCF0043C750 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B13CF5B52920FCE20043C750 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1B4311E29201B590094E1A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4312029201B740094E1A6 /* Task Creation */,
+				B1CE746E2920018A002C7086 /* TimeStats.swift */,
+				B1B4311F29201B620094E1A6 /* List */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B1B4311F29201B620094E1A6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE7463291FFD17002C7086 /* TasksList.swift */,
+				B1CE7469291FFF49002C7086 /* ControlBar.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		B1B4312029201B740094E1A6 /* Task Creation */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4312129201B910094E1A6 /* CreateTask.swift */,
+				B1DFD5C32920250F00F6CCD2 /* TimeInputView.swift */,
+			);
+			path = "Task Creation";
+			sourceTree = "<group>";
+		};
 		B1CE7420291FEED6002C7086 = {
 			isa = PBXGroup;
 			children = (
+				B1F433E7292161A400AE2A78 /* TaskDB+Extension.swift */,
 				B1CE742B291FEED6002C7086 /* Droptick */,
 				B1CE7442291FEED9002C7086 /* DroptickTests */,
 				B1CE744C291FEED9002C7086 /* DroptickUITests */,
@@ -99,6 +162,11 @@
 		B1CE742B291FEED6002C7086 /* Droptick */ = {
 			isa = PBXGroup;
 			children = (
+				B13CF5B42920FCCF0043C750 /* Extensions */,
+				B1CE746B291FFFD5002C7086 /* Lib */,
+				B1CE7467291FFE31002C7086 /* Utils */,
+				B1CE7462291FFD00002C7086 /* Views */,
+				B1CE745E291FF07B002C7086 /* TimeTracker */,
 				B1CE742C291FEED6002C7086 /* DroptickApp.swift */,
 				B1CE742E291FEED6002C7086 /* Persistence.swift */,
 				B1CE7433291FEED6002C7086 /* ContentView.swift */,
@@ -133,6 +201,41 @@
 				B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */,
 			);
 			path = DroptickUITests;
+			sourceTree = "<group>";
+		};
+		B1CE745E291FF07B002C7086 /* TimeTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */,
+				B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */,
+				B1F433F62921A1AC00AE2A78 /* TimeTracker+Repository.swift */,
+			);
+			path = TimeTracker;
+			sourceTree = "<group>";
+		};
+		B1CE7462291FFD00002C7086 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B1B4311E29201B590094E1A6 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B1CE7467291FFE31002C7086 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE7470292001DF002C7086 /* TimeConverter.swift */,
+				B1F433F82921A26B00AE2A78 /* Repository.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B1CE746B291FFFD5002C7086 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				B1CE746C291FFFEB002C7086 /* ButtonStyles.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +368,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CE7464291FFD17002C7086 /* TasksList.swift in Sources */,
+				B1F433E8292161A400AE2A78 /* TaskDB+Extension.swift in Sources */,
 				B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */,
 				B1CE7432291FEED6002C7086 /* Droptick.xcdatamodeld in Sources */,
 				B1CE7434291FEED6002C7086 /* ContentView.swift in Sources */,
+				B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */,
+				B1CE7471292001DF002C7086 /* TimeConverter.swift in Sources */,
+				B1DFD5C42920250F00F6CCD2 /* TimeInputView.swift in Sources */,
+				B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */,
 				B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */,
+				B13CF5B62920FCE20043C750 /* Color.swift in Sources */,
+				B1CE746D291FFFEB002C7086 /* ButtonStyles.swift in Sources */,
+				B1F433F92921A26B00AE2A78 /* Repository.swift in Sources */,
+				B1CE746F2920018A002C7086 /* TimeStats.swift in Sources */,
+				B1F433F72921A1AC00AE2A78 /* TimeTracker+Repository.swift in Sources */,
+				B1B4312229201B910094E1A6 /* CreateTask.swift in Sources */,
+				B1CE7461291FF096002C7086 /* TimeTracker+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,16 +543,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Droptick;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -465,16 +584,19 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Droptick;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
