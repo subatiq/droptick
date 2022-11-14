@@ -22,7 +22,6 @@ class TimeTrackerViewModel: ObservableObject {
         self.model = model
         self.repository = repo
         self.model.tasks = self.repository.getAll()
-        print(self.model.tasks)
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.updateTimePassed()
         }
@@ -43,13 +42,12 @@ class TimeTrackerViewModel: ObservableObject {
             }
         }
         
-        return Array(displayedTasks.values)
+        return Array(displayedTasks.values).sorted {$0.duration > $1.duration}
     }
     
     func addTask(name: String, duration: Int) {
         let task = TimeTracker.Task(name: name, duration: duration)
         model.tasks.append(task)
-        print(model.tasks)
         repository.create(task: task)
     }
     
