@@ -9,12 +9,8 @@ import Foundation
 
 
 extension TaskDB {
-    func toDisplay() -> TaskDisplay {
-        return TaskDisplay(name: self.name!, duration: Int(self.duration))
-    }
-    
     func toTimeTracker() -> TimeTracker.Task {
-        return TimeTracker.Task(name: self.name!, duration: Int(self.duration))
+        return TimeTracker.Task(name: self.name!, duration: Int(self.duration), createdAt: self.createdAt!, publicID: self.publicID!)
     }
     
     func from(task: TimeTracker.Task) -> TaskDB {

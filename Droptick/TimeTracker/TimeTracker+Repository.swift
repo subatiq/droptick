@@ -51,3 +51,16 @@ extension TimeTrackerRepository: TimeTrackerRepositoryInterface {
     }
     
 }
+
+
+class FakeTimeTrackerRepository: TimeTrackerRepositoryInterface {
+    var tasks: [TimeTracker.Task ] = []
+    
+    func getAll() -> [TimeTracker.Task] {
+        return self.tasks
+    }
+    
+    func create(task: TimeTracker.Task) {
+        tasks.append(task)
+    }
+}

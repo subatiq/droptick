@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B13CF5B62920FCE20043C750 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CF5B52920FCE20043C750 /* Color.swift */; };
+		B146BE602925177F008C97C1 /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE5F2925177F008C97C1 /* TaskListTests.swift */; };
+		B146BE6229258C87008C97C1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE6129258C87008C97C1 /* Date.swift */; };
 		B1B4312229201B910094E1A6 /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4312129201B910094E1A6 /* CreateTask.swift */; };
 		B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742C291FEED6002C7086 /* DroptickApp.swift */; };
 		B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742E291FEED6002C7086 /* Persistence.swift */; };
@@ -15,9 +17,6 @@
 		B1CE7434291FEED6002C7086 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7433291FEED6002C7086 /* ContentView.swift */; };
 		B1CE7436291FEED8002C7086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7435291FEED8002C7086 /* Assets.xcassets */; };
 		B1CE743A291FEED8002C7086 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7439291FEED8002C7086 /* Preview Assets.xcassets */; };
-		B1CE7444291FEED9002C7086 /* DroptickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7443291FEED9002C7086 /* DroptickTests.swift */; };
-		B1CE744E291FEED9002C7086 /* DroptickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE744D291FEED9002C7086 /* DroptickUITests.swift */; };
-		B1CE7450291FEED9002C7086 /* DroptickUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */; };
 		B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */; };
 		B1CE7461291FF096002C7086 /* TimeTracker+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */; };
 		B1CE7464291FFD17002C7086 /* TasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7463291FFD17002C7086 /* TasksList.swift */; };
@@ -39,17 +38,12 @@
 			remoteGlobalIDString = B1CE7428291FEED6002C7086;
 			remoteInfo = Droptick;
 		};
-		B1CE744A291FEED9002C7086 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1CE7421291FEED6002C7086 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1CE7428291FEED6002C7086;
-			remoteInfo = Droptick;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B13CF5B52920FCE20043C750 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B146BE5F2925177F008C97C1 /* TaskListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTests.swift; sourceTree = "<group>"; };
+		B146BE6129258C87008C97C1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B1B4312129201B910094E1A6 /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 		B1CE7429291FEED6002C7086 /* Droptick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Droptick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CE742C291FEED6002C7086 /* DroptickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickApp.swift; sourceTree = "<group>"; };
@@ -60,10 +54,6 @@
 		B1CE7437291FEED8002C7086 /* Droptick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Droptick.entitlements; sourceTree = "<group>"; };
 		B1CE7439291FEED8002C7086 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1CE743F291FEED9002C7086 /* DroptickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroptickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1CE7443291FEED9002C7086 /* DroptickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickTests.swift; sourceTree = "<group>"; };
-		B1CE7449291FEED9002C7086 /* DroptickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroptickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1CE744D291FEED9002C7086 /* DroptickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickUITests.swift; sourceTree = "<group>"; };
-		B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+Model.swift"; sourceTree = "<group>"; };
 		B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+ViewModel.swift"; sourceTree = "<group>"; };
 		B1CE7463291FFD17002C7086 /* TasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
@@ -92,13 +82,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1CE7446291FEED9002C7086 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				B13CF5B52920FCE20043C750 /* Color.swift */,
+				B146BE6129258C87008C97C1 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -144,7 +128,6 @@
 				B1F433E7292161A400AE2A78 /* TaskDB+Extension.swift */,
 				B1CE742B291FEED6002C7086 /* Droptick */,
 				B1CE7442291FEED9002C7086 /* DroptickTests */,
-				B1CE744C291FEED9002C7086 /* DroptickUITests */,
 				B1CE742A291FEED6002C7086 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,7 +137,6 @@
 			children = (
 				B1CE7429291FEED6002C7086 /* Droptick.app */,
 				B1CE743F291FEED9002C7086 /* DroptickTests.xctest */,
-				B1CE7449291FEED9002C7086 /* DroptickUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,18 +171,9 @@
 		B1CE7442291FEED9002C7086 /* DroptickTests */ = {
 			isa = PBXGroup;
 			children = (
-				B1CE7443291FEED9002C7086 /* DroptickTests.swift */,
+				B146BE5F2925177F008C97C1 /* TaskListTests.swift */,
 			);
 			path = DroptickTests;
-			sourceTree = "<group>";
-		};
-		B1CE744C291FEED9002C7086 /* DroptickUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B1CE744D291FEED9002C7086 /* DroptickUITests.swift */,
-				B1CE744F291FEED9002C7086 /* DroptickUITestsLaunchTests.swift */,
-			);
-			path = DroptickUITests;
 			sourceTree = "<group>";
 		};
 		B1CE745E291FF07B002C7086 /* TimeTracker */ = {
@@ -276,24 +249,6 @@
 			productReference = B1CE743F291FEED9002C7086 /* DroptickTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B1CE7448291FEED9002C7086 /* DroptickUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1CE7459291FEED9002C7086 /* Build configuration list for PBXNativeTarget "DroptickUITests" */;
-			buildPhases = (
-				B1CE7445291FEED9002C7086 /* Sources */,
-				B1CE7446291FEED9002C7086 /* Frameworks */,
-				B1CE7447291FEED9002C7086 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1CE744B291FEED9002C7086 /* PBXTargetDependency */,
-			);
-			name = DroptickUITests;
-			productName = DroptickUITests;
-			productReference = B1CE7449291FEED9002C7086 /* DroptickUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -308,10 +263,6 @@
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					B1CE743E291FEED9002C7086 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = B1CE7428291FEED6002C7086;
-					};
-					B1CE7448291FEED9002C7086 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = B1CE7428291FEED6002C7086;
 					};
@@ -332,7 +283,6 @@
 			targets = (
 				B1CE7428291FEED6002C7086 /* Droptick */,
 				B1CE743E291FEED9002C7086 /* DroptickTests */,
-				B1CE7448291FEED9002C7086 /* DroptickUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,13 +304,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1CE7447291FEED9002C7086 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,6 +318,7 @@
 				B1CE7434291FEED6002C7086 /* ContentView.swift in Sources */,
 				B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */,
 				B1CE7471292001DF002C7086 /* TimeConverter.swift in Sources */,
+				B146BE6229258C87008C97C1 /* Date.swift in Sources */,
 				B1DFD5C42920250F00F6CCD2 /* TimeInputView.swift in Sources */,
 				B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */,
 				B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */,
@@ -392,16 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CE7444291FEED9002C7086 /* DroptickTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1CE7445291FEED9002C7086 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1CE7450291FEED9002C7086 /* DroptickUITestsLaunchTests.swift in Sources */,
-				B1CE744E291FEED9002C7086 /* DroptickUITests.swift in Sources */,
+				B146BE602925177F008C97C1 /* TaskListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +347,6 @@
 			isa = PBXTargetDependency;
 			target = B1CE7428291FEED6002C7086 /* Droptick */;
 			targetProxy = B1CE7440291FEED9002C7086 /* PBXContainerItemProxy */;
-		};
-		B1CE744B291FEED9002C7086 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1CE7428291FEED6002C7086 /* Droptick */;
-			targetProxy = B1CE744A291FEED9002C7086 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -658,50 +588,6 @@
 			};
 			name = Release;
 		};
-		B1CE745A291FEED9002C7086 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WLF4K799KP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.DroptickUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Droptick;
-			};
-			name = Debug;
-		};
-		B1CE745B291FEED9002C7086 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WLF4K799KP;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.subatiq.DroptickUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Droptick;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -728,15 +614,6 @@
 			buildConfigurations = (
 				B1CE7457291FEED9002C7086 /* Debug */,
 				B1CE7458291FEED9002C7086 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1CE7459291FEED9002C7086 /* Build configuration list for PBXNativeTarget "DroptickUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1CE745A291FEED9002C7086 /* Debug */,
-				B1CE745B291FEED9002C7086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -26,9 +26,16 @@ struct TimeTracker {
     var secondsPassedSinceMidnight: Int = Date().secondsSinceMidnight
     
     struct Task {
-        let publicID: UUID = UUID()
+        let publicID: UUID
         var name: String
         var duration: Int
-        let createdAt: Date = Date.now
+        let createdAt: Date
+        
+        init(name: String, duration: Int, createdAt: Date = Date.now, publicID: UUID = UUID()) {
+            self.name = name
+            self.duration = duration
+            self.createdAt = createdAt
+            self.publicID = publicID
+        }
     }
 }
