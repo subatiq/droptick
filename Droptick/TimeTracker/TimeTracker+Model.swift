@@ -23,7 +23,12 @@ extension Date {
 
 struct TimeTracker {
     var tasks: [Task]
-    var secondsPassedSinceMidnight: Int = Date().secondsSinceMidnight
+    var secondsPassedSinceMidnight: Int
+    
+    init(tasks: [Task] = [], secondsPassedSinceMidnight: Int = Date().secondsSinceMidnight) {
+        self.tasks = tasks
+        self.secondsPassedSinceMidnight = secondsPassedSinceMidnight
+    }
     
     struct Task {
         let publicID: UUID
