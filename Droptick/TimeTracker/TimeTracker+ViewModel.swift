@@ -35,7 +35,6 @@ class TimeTrackerViewModel: ObservableObject {
     func getTasksList() -> [TaskDisplay] {
         var displayedTasks = [String : TaskDisplay]()
         for task in self.model.tasks.filter({$0.createdAt.normalize() > Date().startOfCurrentDay.normalize()}) {
-            print(task.createdAt)
             if !displayedTasks.contains(where: {$0.key == task.name}) {
                 displayedTasks[task.name] = TaskDisplay(name: task.name, duration: Int(task.duration), updatedAt: task.createdAt)
             }
