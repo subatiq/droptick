@@ -71,6 +71,9 @@ public struct HourAndMinutesField: View {
         guard self.enteredString.count > 0 else {
             return
         }
+        if self.enteredString.count > 4 {
+            self.enteredString = String(Array(self.enteredString)[4])
+        }
         var defaultDigits = Array("0000")
         let enteredDigits = Array(self.enteredString)
         for (index, char) in enteredDigits.enumerated() {
