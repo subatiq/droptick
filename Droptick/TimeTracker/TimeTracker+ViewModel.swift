@@ -32,7 +32,7 @@ class TimeTrackerViewModel: ObservableObject {
         self.model.secondsPassedSinceMidnight = Date().secondsSinceMidnight
     }
     
-    func getTasksList() -> [TaskDisplay] {
+    func getSimpleDisplayTasksList() -> [TaskDisplay] {
         var displayedTasks = [String : TaskDisplay]()
         for task in self.model.tasks.filter({$0.createdAt.normalize() > Date().startOfCurrentDay.normalize()}) {
             if !displayedTasks.contains(where: {$0.key == task.name}) {
@@ -49,6 +49,15 @@ class TimeTrackerViewModel: ObservableObject {
         return Array(displayedTasks.values).sorted {$0.updatedAt > $1.updatedAt}
     }
     
+    func getAllTasks(for day: Date) -> [TimeTracker.Task] {
+        return model.tasks.filter{
+            $0.createdAt.normalize() > day.startOfCurrentDay.normalize() &&
+            $0.createdAt.normalize() < day.endOfCurrentDay.normalize()
+        }.sorted {
+            $0.createdAt > $1.createdAt
+        }
+    }
+    
     func addTask(name: String, duration: Int) {
         let task = TimeTracker.Task(name: name, duration: duration)
         model.tasks.append(task)
@@ -56,14 +65,11 @@ class TimeTrackerViewModel: ObservableObject {
     }
     
     func delete(task: TimeTracker.Task) {
-        if let index = model.tasks.firstIndex(where: {checkedTask in checkedTask.publicID == task.publicID}) {
-            delete(atIndex: IndexSet(integer: index))
+        repository.delete(task: task)
+        guard let index = model.tasks.firstIndex(where: {$0.publicID == task.publicID}) else {
+            return
         }
-    }
-    
-    func delete(atIndex index: IndexSet) {
-        // FIXME: TaskDisplay and Task will handle it differently
-        model.tasks.remove(atOffsets: index)
+        model.tasks.remove(at: index)
     }
     
     func getTotalTimeUnused() -> Int {

@@ -5,6 +5,7 @@ import CoreData
 protocol TimeTrackerRepositoryInterface {
     func getAll() -> [TimeTracker.Task]
     func create(task: TimeTracker.Task)
+    func delete(task: TimeTracker.Task)
 }
 
 class TimeTrackerRepository {
@@ -18,19 +19,22 @@ class TimeTrackerRepository {
 }
 
 extension TimeTrackerRepository: TimeTrackerRepositoryInterface {
-    @discardableResult func getAll() -> [TimeTracker.Task] {
+    private func getAllRaw() -> [TaskDB] {
         let result = repository.get(predicate: nil, sortDescriptors: nil)
         switch result {
         case .success(let tasksDB):
             // Transform the NSManagedObject objects to domain objects
-            let tasks = tasksDB.map { taskDB -> TimeTracker.Task in
-                return taskDB.toTimeTracker()
-            }
-            
-            return tasks
+            return tasksDB
         case .failure(let error):
             // FIXME: Can be a source of unhandled errors
-            return [TimeTracker.Task(name: error.localizedDescription, duration: 100)]
+            print(error)
+            return []
+        }
+    }
+    
+    @discardableResult func getAll() -> [TimeTracker.Task] {
+        return self.getAllRaw().map { taskDB -> TimeTracker.Task in
+            return taskDB.toTimeTracker()
         }
     }
 
@@ -50,6 +54,26 @@ extension TimeTrackerRepository: TimeTrackerRepositoryInterface {
         }
     }
     
+    func delete(task: TimeTracker.Task) {
+        let tasks = repository.get(predicate: nil, sortDescriptors: nil)
+        switch tasks {
+        case .success(let fetched):
+            guard let taskToDelete = fetched.first(where: {$0.publicID == task.publicID}) else {
+                return
+            }
+            print(taskToDelete)
+            switch repository.delete(entity: taskToDelete) {
+            case .success(_):
+                repository.save()
+                return
+            case .failure(let err):
+                print("Error deleting \(err)")
+            }
+        case .failure(_):
+            print("Failure 10239")
+            return
+        }
+    }
 }
 
 
@@ -62,5 +86,12 @@ class FakeTimeTrackerRepository: TimeTrackerRepositoryInterface {
     
     func create(task: TimeTracker.Task) {
         tasks.append(task)
+    }
+    
+    func delete(task: TimeTracker.Task) {
+        guard let index = tasks.firstIndex(where: {$0.publicID == task.publicID}) else {
+            return
+        }
+        tasks.remove(at: index)
     }
 }

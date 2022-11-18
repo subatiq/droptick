@@ -28,7 +28,7 @@ final class TaskLifecycleTests: XCTestCase {
         for testcase in cases {
             viewModel.addTask(name: testcase.name, duration: testcase.duration)
             
-            let lastAdded = viewModel.getTasksList()[0]
+            let lastAdded = viewModel.getSimpleDisplayTasksList()[0]
             XCTAssertEqual(lastAdded.name, testcase.name)
             XCTAssertEqual(lastAdded.duration, testcase.duration)
         }
