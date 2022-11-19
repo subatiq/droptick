@@ -46,3 +46,7 @@ func convertToSeconds(seconds: Int) -> Int {
     let minutes = convertToMinutes(seconds: seconds)
     return seconds - minutes * 60 - hours * 3600
 }
+
+func formatToHoursAndMinutes(totalSeconds seconds: Int) -> String {
+    return String(format: "%02d:%02d", convertToHours(seconds: seconds), convertToMinutes(seconds: seconds))
+}

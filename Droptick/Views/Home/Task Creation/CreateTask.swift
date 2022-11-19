@@ -63,14 +63,14 @@ struct CreateTask: View {
                 .background(.white.opacity(0.1))
                 .cornerRadius(20)
                 
-                if self.canCreateTask() {
+                if name.count > 0 {
                     Button()
                     {
-                        timeTracker.addTask(name: name, duration: duration)
+                        timeTracker.addTask(name: name, duration: canCreateTask() ? duration : timeTracker.getTotalTimeUntracked() / 60)
                         currentRoute = .home
                     }
                     label: {
-                        Text("Add task".uppercased())
+                        Text("Spend \(canCreateTask() ? formatToHoursAndMinutes(totalSeconds: duration * 60) : formatToHoursAndMinutes(totalSeconds: timeTracker.getTotalTimeUntracked()))".uppercased())
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(AddTaskButton())

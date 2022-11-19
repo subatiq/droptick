@@ -72,7 +72,7 @@ class TimeTrackerViewModel: ObservableObject {
         model.tasks.remove(at: index)
     }
     
-    func getTotalTimeUnused() -> Int {
+    func getTotalTimeUntracked() -> Int {
         return self.model.secondsPassedSinceMidnight - self.model.tasks
             .filter{$0.createdAt > Date().startOfCurrentDay}
             .map{$0.duration}.reduce(0, +) * 60

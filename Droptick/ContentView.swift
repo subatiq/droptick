@@ -30,7 +30,7 @@ struct ContentView: View {
                     MenuPanel(fullListShown: $showFullList)
                 }
                 Spacer()
-                TimeStats(secondsPassed: timeTracker.getTotalTimeUnused())
+                TimeStats(secondsPassed: timeTracker.getTotalTimeUntracked())
                     .opacity(showFullList ? 0.5 : 1)
             }.padding(20)
             switch currentRoute {
