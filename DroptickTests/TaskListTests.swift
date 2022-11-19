@@ -96,6 +96,15 @@ final class TaskListTests: XCTestCase {
                 ],
                 expected_count: 3,
                 expected_total_duration: 40
+            ),
+            TestCase(
+                tasks: [
+                    TimeTracker.Task(name: "test1 ", duration: 10),
+                    TimeTracker.Task(name: "test1", duration: 10),
+                    TimeTracker.Task(name: " test1  ", duration: 20)
+                ],
+                expected_count: 1,
+                expected_total_duration: 40
             )
         ]
         

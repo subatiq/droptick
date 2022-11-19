@@ -22,7 +22,7 @@ struct SwitchListMenuButton: View {
                     .cornerRadius(15)
                 Image(systemName: "pencil.line")
                     .foregroundColor(.white)
-                    .font(.system(size: 20))
+                    .font(.system(size: 22))
             }
             
         }
@@ -32,12 +32,19 @@ struct SwitchListMenuButton: View {
 
 
 struct MenuPanel: View {
+    var timeTracker: TimeTrackerViewModel
     @Binding var fullListShown: Bool
+    @State var showingStats: Bool = false
     
     var body: some View {
         HStack {
+            StatsButton {showingStats.toggle()}
+                .sheet(isPresented: $showingStats) {
+                    StatisticsView(timeTracker: timeTracker)
+                }
             Spacer()
             SwitchListMenuButton(switched: $fullListShown)
+            
         }
     }
 }
