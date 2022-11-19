@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B1013F472927FE4100489866 /* FullTaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F462927FE4100489866 /* FullTaskList.swift */; };
 		B1013F492927FF4F00489866 /* MenuPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F482927FF4F00489866 /* MenuPanel.swift */; };
+		B1013F4C2929110A00489866 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F4B2929110A00489866 /* StatisticsView.swift */; };
+		B1013F4E2929116500489866 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F4D2929116500489866 /* PieChartView.swift */; };
+		B1013F502929124400489866 /* StatsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F4F2929124400489866 /* StatsButtonView.swift */; };
 		B1361B12292615A800DEB8B4 /* TaskLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1361B11292615A800DEB8B4 /* TaskLifecycleTests.swift */; };
 		B13CF5B62920FCE20043C750 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CF5B52920FCE20043C750 /* Color.swift */; };
 		B146BE602925177F008C97C1 /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE5F2925177F008C97C1 /* TaskListTests.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		B1013F462927FE4100489866 /* FullTaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTaskList.swift; sourceTree = "<group>"; };
 		B1013F482927FF4F00489866 /* MenuPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanel.swift; sourceTree = "<group>"; };
+		B1013F4B2929110A00489866 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		B1013F4D2929116500489866 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		B1013F4F2929124400489866 /* StatsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsButtonView.swift; sourceTree = "<group>"; };
 		B1361B11292615A800DEB8B4 /* TaskLifecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLifecycleTests.swift; sourceTree = "<group>"; };
 		B13CF5B52920FCE20043C750 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B146BE5F2925177F008C97C1 /* TaskListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTests.swift; sourceTree = "<group>"; };
@@ -91,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1013F4A292910F500489866 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				B1013F4B2929110A00489866 /* StatisticsView.swift */,
+				B1013F4D2929116500489866 /* PieChartView.swift */,
+				B1013F4F2929124400489866 /* StatsButtonView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
 		B13CF5B42920FCCF0043C750 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 		B1B4311E29201B590094E1A6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B1013F4A292910F500489866 /* Statistics */,
 				B1B4312029201B740094E1A6 /* Task Creation */,
 				B1CE746E2920018A002C7086 /* TimeStats.swift */,
 				B1B4311F29201B620094E1A6 /* List */,
@@ -324,12 +341,14 @@
 				B1F433E8292161A400AE2A78 /* TaskDB+Extension.swift in Sources */,
 				B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */,
 				B1CE7432291FEED6002C7086 /* Droptick.xcdatamodeld in Sources */,
+				B1013F4E2929116500489866 /* PieChartView.swift in Sources */,
 				B1013F472927FE4100489866 /* FullTaskList.swift in Sources */,
 				B1CE7434291FEED6002C7086 /* ContentView.swift in Sources */,
 				B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */,
 				B1CE7471292001DF002C7086 /* TimeConverter.swift in Sources */,
 				B146BE6229258C87008C97C1 /* Date.swift in Sources */,
 				B1DFD5C42920250F00F6CCD2 /* TimeInputView.swift in Sources */,
+				B1013F4C2929110A00489866 /* StatisticsView.swift in Sources */,
 				B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */,
 				B1013F492927FF4F00489866 /* MenuPanel.swift in Sources */,
 				B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */,
@@ -339,6 +358,7 @@
 				B1CE746F2920018A002C7086 /* TimeStats.swift in Sources */,
 				B1F433F72921A1AC00AE2A78 /* TimeTracker+Repository.swift in Sources */,
 				B1B4312229201B910094E1A6 /* CreateTask.swift in Sources */,
+				B1013F502929124400489866 /* StatsButtonView.swift in Sources */,
 				B1CE7461291FF096002C7086 /* TimeTracker+ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,21 +32,29 @@ class TimeTrackerViewModel: ObservableObject {
         self.model.secondsPassedSinceMidnight = Date().secondsSinceMidnight
     }
     
-    func getSimpleDisplayTasksList() -> [TaskDisplay] {
+    func getSimpleDispleyTasksList(startDay start: Date, endDay end: Date) -> [TaskDisplay] {
         var displayedTasks = [String : TaskDisplay]()
-        for task in self.model.tasks.filter({$0.createdAt.normalize() > Date().startOfCurrentDay.normalize()}) {
-            if !displayedTasks.contains(where: {$0.key == task.name}) {
-                displayedTasks[task.name] = TaskDisplay(name: task.name, duration: Int(task.duration), updatedAt: task.createdAt)
+        for task in self.model.tasks.filter({
+            $0.createdAt.normalize() > start.startOfCurrentDay.normalize() && $0.createdAt.normalize() < end.endOfCurrentDay.normalize()
+            
+        }) {
+            let taskName = task.name.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !displayedTasks.contains(where: {$0.key == taskName}) {
+                displayedTasks[taskName.trimmingCharacters(in: .whitespacesAndNewlines)] = TaskDisplay(name: taskName, duration: Int(task.duration), updatedAt: task.createdAt)
             }
             else {
-                let displayedLastUpdate = displayedTasks[task.name]!.updatedAt
+                let displayedLastUpdate = displayedTasks[taskName]!.updatedAt
                 let newUpdate = displayedLastUpdate > task.createdAt ? displayedLastUpdate : task.createdAt
-                displayedTasks[task.name]!.duration += task.duration
-                displayedTasks[task.name]!.updatedAt = newUpdate
+                displayedTasks[taskName]!.duration += task.duration
+                displayedTasks[taskName]!.updatedAt = newUpdate
             }
         }
         
         return Array(displayedTasks.values).sorted {$0.updatedAt > $1.updatedAt}
+    }
+    
+    func getSimpleDisplayTasksList() -> [TaskDisplay] {
+        getSimpleDispleyTasksList(startDay: Date.now, endDay: Date.now)
     }
     
     func getAllTasks(for day: Date) -> [TimeTracker.Task] {
@@ -59,7 +67,10 @@ class TimeTrackerViewModel: ObservableObject {
     }
     
     func addTask(name: String, duration: Int) {
-        let task = TimeTracker.Task(name: name, duration: duration)
+        let task = TimeTracker.Task(
+            name: name.trimmingCharacters(in: .whitespacesAndNewlines),
+            duration: duration
+        )
         model.tasks.append(task)
         repository.create(task: task)
     }

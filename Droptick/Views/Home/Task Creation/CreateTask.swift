@@ -66,7 +66,7 @@ struct CreateTask: View {
                 .background(.white.opacity(0.1))
                 .cornerRadius(20)
                 
-                if nameEntered {
+                if nameEntered && (duration > 0 || (timeTracker.getTotalTimeUntracked() / 60) > 0) {
                     Button()
                     {
                         timeTracker.addTask(name: name, duration: canCreateTask() ? duration : timeTracker.getTotalTimeUntracked() / 60)

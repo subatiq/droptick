@@ -28,7 +28,6 @@ struct TaskCell: View {
 
     var body: some View {
         HStack(alignment: .center) {
-            
             VStack(alignment: .trailing) {
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
