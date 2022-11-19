@@ -13,10 +13,9 @@ struct TaskListView: View {
 
     var body: some View {
         List {
-            ForEach(self.timeTracker.getTasksList(), id: \.name) { task in
+            ForEach(self.timeTracker.getSimpleDisplayTasksList(), id: \.name) { task in
                 TaskCell(task: task)
             }
-            .onDelete(perform: timeTracker.delete)
         }
         
         .listStyle(PlainListStyle())
@@ -34,8 +33,7 @@ struct TaskCell: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(task.name)
-                            .font(.system(size: 16 , weight: .bold))
-                            .opacity(0.75)
+                            .font(.system(size: 18 , weight: .bold))
                     }
                     Spacer()
                 }

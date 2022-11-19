@@ -10,8 +10,14 @@ import SwiftUI
 
 extension Date {
     var startOfCurrentDay: Date {
-        return Calendar.current.startOfDay(for: Date.now)
+        return Calendar.current.startOfDay(for: self)
     }
+    
+    var endOfCurrentDay: Date {
+        // FIXME: Don't know why we need an unwrap here
+        return Calendar.current.date(byAdding: .day, value: 1, to: self.startOfCurrentDay)!
+    }
+    
     var secondsSinceMidnight: Int {
         return Int(self.timeIntervalSince(startOfCurrentDay))
     }

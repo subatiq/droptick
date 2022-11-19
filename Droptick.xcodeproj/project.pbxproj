@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1013F472927FE4100489866 /* FullTaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F462927FE4100489866 /* FullTaskList.swift */; };
+		B1013F492927FF4F00489866 /* MenuPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1013F482927FF4F00489866 /* MenuPanel.swift */; };
 		B1361B12292615A800DEB8B4 /* TaskLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1361B11292615A800DEB8B4 /* TaskLifecycleTests.swift */; };
 		B13CF5B62920FCE20043C750 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13CF5B52920FCE20043C750 /* Color.swift */; };
 		B146BE602925177F008C97C1 /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE5F2925177F008C97C1 /* TaskListTests.swift */; };
@@ -20,7 +22,7 @@
 		B1CE743A291FEED8002C7086 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7439291FEED8002C7086 /* Preview Assets.xcassets */; };
 		B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */; };
 		B1CE7461291FF096002C7086 /* TimeTracker+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */; };
-		B1CE7464291FFD17002C7086 /* TasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7463291FFD17002C7086 /* TasksList.swift */; };
+		B1CE7464291FFD17002C7086 /* MainTasksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7463291FFD17002C7086 /* MainTasksList.swift */; };
 		B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7469291FFF49002C7086 /* ControlBar.swift */; };
 		B1CE746D291FFFEB002C7086 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE746C291FFFEB002C7086 /* ButtonStyles.swift */; };
 		B1CE746F2920018A002C7086 /* TimeStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE746E2920018A002C7086 /* TimeStats.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1013F462927FE4100489866 /* FullTaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTaskList.swift; sourceTree = "<group>"; };
+		B1013F482927FF4F00489866 /* MenuPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPanel.swift; sourceTree = "<group>"; };
 		B1361B11292615A800DEB8B4 /* TaskLifecycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLifecycleTests.swift; sourceTree = "<group>"; };
 		B13CF5B52920FCE20043C750 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B146BE5F2925177F008C97C1 /* TaskListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTests.swift; sourceTree = "<group>"; };
@@ -58,7 +62,7 @@
 		B1CE743F291FEED9002C7086 /* DroptickTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroptickTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CE745C291FEFC4002C7086 /* TimeTracker+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+Model.swift"; sourceTree = "<group>"; };
 		B1CE7460291FF096002C7086 /* TimeTracker+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeTracker+ViewModel.swift"; sourceTree = "<group>"; };
-		B1CE7463291FFD17002C7086 /* TasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksList.swift; sourceTree = "<group>"; };
+		B1CE7463291FFD17002C7086 /* MainTasksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTasksList.swift; sourceTree = "<group>"; };
 		B1CE7469291FFF49002C7086 /* ControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
 		B1CE746C291FFFEB002C7086 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		B1CE746E2920018A002C7086 /* TimeStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStats.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				B1B4312029201B740094E1A6 /* Task Creation */,
 				B1CE746E2920018A002C7086 /* TimeStats.swift */,
 				B1B4311F29201B620094E1A6 /* List */,
+				B1013F482927FF4F00489866 /* MenuPanel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -109,8 +114,9 @@
 		B1B4311F29201B620094E1A6 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				B1CE7463291FFD17002C7086 /* TasksList.swift */,
+				B1CE7463291FFD17002C7086 /* MainTasksList.swift */,
 				B1CE7469291FFF49002C7086 /* ControlBar.swift */,
+				B1013F462927FE4100489866 /* FullTaskList.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -314,16 +320,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1CE7464291FFD17002C7086 /* TasksList.swift in Sources */,
+				B1CE7464291FFD17002C7086 /* MainTasksList.swift in Sources */,
 				B1F433E8292161A400AE2A78 /* TaskDB+Extension.swift in Sources */,
 				B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */,
 				B1CE7432291FEED6002C7086 /* Droptick.xcdatamodeld in Sources */,
+				B1013F472927FE4100489866 /* FullTaskList.swift in Sources */,
 				B1CE7434291FEED6002C7086 /* ContentView.swift in Sources */,
 				B1CE745D291FEFC4002C7086 /* TimeTracker+Model.swift in Sources */,
 				B1CE7471292001DF002C7086 /* TimeConverter.swift in Sources */,
 				B146BE6229258C87008C97C1 /* Date.swift in Sources */,
 				B1DFD5C42920250F00F6CCD2 /* TimeInputView.swift in Sources */,
 				B1CE746A291FFF49002C7086 /* ControlBar.swift in Sources */,
+				B1013F492927FF4F00489866 /* MenuPanel.swift in Sources */,
 				B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */,
 				B13CF5B62920FCE20043C750 /* Color.swift in Sources */,
 				B1CE746D291FFFEB002C7086 /* ButtonStyles.swift in Sources */,

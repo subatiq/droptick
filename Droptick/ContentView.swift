@@ -17,6 +17,7 @@ enum Route {
 struct ContentView: View {
     @ObservedObject var timeTracker: TimeTrackerViewModel
     @State var currentRoute: Route = .newTask
+    @State private var showFullList: Bool = false
 
     init() {
         self.currentRoute = Route.newTask
@@ -25,15 +26,25 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
+                if currentRoute != Route.newTask {
+                    MenuPanel(fullListShown: $showFullList)
+                }
                 Spacer()
                 TimeStats(secondsPassed: timeTracker.getTotalTimeUnused())
+                    .opacity(showFullList ? 0.5 : 1)
             }.padding(20)
             switch currentRoute {
             case .home:
                 VStack {
-                    TaskListView(timeTracker: timeTracker)
-                    MainTabBar(currentRoute: $currentRoute)
-                        .padding(20)
+                    if !showFullList {
+                        TaskListView(timeTracker: timeTracker)
+                        MainTabBar(currentRoute: $currentRoute)
+                            .padding(20)
+                    }
+                    else {
+                        FullTaskListView(timeTracker: timeTracker)
+                    }
+
                 }
             case .newTask:
                 CreateTask(currentRoute: $currentRoute, timeTracker: timeTracker)

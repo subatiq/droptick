@@ -57,7 +57,7 @@ final class TaskListTests: XCTestCase {
             repo.tasks = testcase.tasks
             let viewModel = TimeTrackerViewModel(model: model, repo: repo)
 
-            let displayed = viewModel.getTasksList()
+            let displayed = viewModel.getSimpleDisplayTasksList()
             
             XCTAssertEqual(displayed.count, testcase.expected)
         }
@@ -106,7 +106,7 @@ final class TaskListTests: XCTestCase {
             repo.tasks = testcase.tasks
             let viewModel = TimeTrackerViewModel(model: model, repo: repo)
 
-            let displayed = viewModel.getTasksList()
+            let displayed = viewModel.getSimpleDisplayTasksList()
             
             XCTAssertEqual(displayed.count, testcase.expected_count)
             XCTAssertEqual(displayed.map{$0.duration}.reduce(0, +), testcase.expected_total_duration)
