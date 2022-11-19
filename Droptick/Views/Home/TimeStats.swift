@@ -20,7 +20,7 @@ struct TimeStats: View {
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(.gray)
                     HStack(alignment: .bottom) {
-                        Text(String(format: "%02d:%02d", convertToHours(seconds:secondsPassed), convertToMinutes(seconds:secondsPassed)))
+                        Text(formatToHoursAndMinutes(totalSeconds: secondsPassed))
                             .font(.system(size: 60, weight: .black))
                     }
                     Text(String(format: ":%02d",convertToSeconds(seconds:secondsPassed)))
