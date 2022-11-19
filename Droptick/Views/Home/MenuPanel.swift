@@ -18,11 +18,11 @@ struct SwitchListMenuButton: View {
             ZStack {
                 Rectangle()
                     .foregroundColor(switched ? .accentColor : .white.opacity(0.1))
-                    .frame(width: 60, height: 60)
-                    .cornerRadius(20)
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(15)
                 Image(systemName: "pencil.line")
                     .foregroundColor(.white)
-                    .font(.system(size: 35))
+                    .font(.system(size: 20))
             }
             
         }
@@ -35,7 +35,8 @@ struct MenuPanel: View {
     @Binding var fullListShown: Bool
     
     var body: some View {
-        VStack {
+        HStack {
+            Spacer()
             SwitchListMenuButton(switched: $fullListShown)
         }
     }

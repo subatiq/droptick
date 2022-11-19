@@ -23,16 +23,17 @@ struct CreateTask: View {
         VStack {
             Spacer()
             
-            Text("What have you done?")
-                .font(.system(size: 16, weight: .medium))
-                .foregroundColor(Color.gray)
-
+            if !nameEntered {
+                Text("What have you done?")
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundColor(Color.gray)
+            }
             TextField(
                 "",
                 text: $name
             )
             .multilineTextAlignment(.center)
-            .font(.system(size: 26, weight: .black))
+            .font(.system(size: 30, weight: .black))
             .focused($nameInputFocused)
             .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
             .background(nameEntered ? .clear : .white.opacity(0.1))
@@ -43,9 +44,11 @@ struct CreateTask: View {
             }
             
             if nameEntered {
-                Text("How long did it take?")
-                    .font(.system(size: 16, weight: .medium))
-                    .foregroundColor(Color.gray)
+                if !durationEntered {
+                    Text("How long did it take?")
+                        .font(.system(size: 16, weight: .medium))
+                        .foregroundColor(Color.gray)
+                }
                 HourAndMinutesField(minutes: $duration, completed: $durationEntered)
             }
             Spacer()
@@ -63,7 +66,7 @@ struct CreateTask: View {
                 .background(.white.opacity(0.1))
                 .cornerRadius(20)
                 
-                if name.count > 0 {
+                if nameEntered {
                     Button()
                     {
                         timeTracker.addTask(name: name, duration: canCreateTask() ? duration : timeTracker.getTotalTimeUntracked() / 60)
