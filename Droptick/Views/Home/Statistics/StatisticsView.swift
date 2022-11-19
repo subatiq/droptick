@@ -46,12 +46,15 @@ struct StatisticsView: View {
     
     var body: some View {
         VStack(alignment: .center) {
+            Text("Total tracked time")
+                .font(.system(size: 22, weight: .bold))
+                .padding(.top, 20)
             PieChartView(
                 values: sortedTodos(
                     start: startDate,
                     end: endDate
                 )
-                .map{Double($0.duration)}
+                .map{Double($0.duration) / Double(sortedTodos(start: startDate, end: endDate).map{$0.duration}.reduce(0, +))}
             )
             if sortedTodos(start: startDate, end: endDate).count > 0 {
                 HStack {
@@ -98,6 +101,11 @@ struct StatsTaskCell: View {
 
     let task: TaskDisplay
     let totalTimeTrackedForInterval: Int
+    
+    init(task: TaskDisplay, totalTimeTrackedForInterval: Int) {
+        self.task = task
+        self.totalTimeTrackedForInterval = totalTimeTrackedForInterval
+    }
 
     var body: some View {
         HStack(alignment: .center) {
@@ -113,7 +121,7 @@ struct StatsTaskCell: View {
             }
             .cornerRadius(10)
             VStack(alignment: .trailing) {
-                Text("\(task.duration * 60 / totalTimeTrackedForInterval)%")
+                Text("\(Int(Double(task.duration) * 100 / Double(totalTimeTrackedForInterval)))%")
                     .font(.system(size: 18, weight: .bold))
                 HStack {
                     Image(systemName: "hourglass.bottomhalf.filled")
