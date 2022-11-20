@@ -15,7 +15,7 @@ struct MainTabBar: View {
         Button() {
             currentRoute = Route.newTask
         } label: {
-            Text("Add task".uppercased())
+            Text("Add record".uppercased())
                 .frame(maxWidth: .infinity)
         }
         .buttonStyle(AddTaskButton())

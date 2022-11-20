@@ -85,7 +85,6 @@ struct PieChartView: View {
     }
     
     var body: some View {
-        let values = values
         let slices = self.slices
         return ZStack{
             ForEach(0..<slices.count, id: \.self){i in
