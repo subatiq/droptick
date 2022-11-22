@@ -10,9 +10,23 @@ enum InputFocusable: Hashable {
 public struct HourAndMinutesField: View {
     
     @Binding var minutes: Int
-    @State private var enteredString: String = ""
+    @State private var enteredString: String
     @FocusState var focused: Bool
     @Binding var completed: Bool
+    private var focusOnAppearance: Bool
+    
+    init(minutes: Binding<Int>, completed: Binding<Bool>, focusOnAppearance: Bool = true) {
+        self._minutes = minutes
+        self._completed = completed
+        self.enteredString = ""
+        self.focusOnAppearance = focusOnAppearance
+        if self.minutes > 0 {
+            let formatted = formatToHoursAndMinutes(totalSeconds: self.minutes * 60).replacingOccurrences(of: ":", with: "")
+            self._enteredString = State(wrappedValue: formatted)
+        }
+    
+   
+    }
     
     public var body: some View {
         ZStack {
@@ -36,30 +50,27 @@ public struct HourAndMinutesField: View {
         }
         
         .onAppear{
-            focused = true
+            focused = self.focusOnAppearance
         }
         
     }
     
     private var backgroundField: some View {
         let boundDigit = Binding<String>(get: { self.enteredString }, set: { newValue in
-<<<<<<< Updated upstream
             self.enteredString = newValue
-=======
             if (newValue.count == 0 && enteredString.count == 4) {
                 // do nothing
             }
             else {
                 self.enteredString = newValue
             }
->>>>>>> Stashed changes
             updateTimeEntered()
             submitPin()
         })
-        
-        return TextField("", text: boundDigit)
+        return TextField(self.enteredString, text: boundDigit)
            .accentColor(.clear)
            .foregroundColor(.clear)
+           .font(.system(size: 60, weight: .black))
            .keyboardType(.numberPad)
            .focused($focused)
     }

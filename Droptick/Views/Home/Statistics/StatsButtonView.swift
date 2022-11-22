@@ -15,8 +15,8 @@ struct StatsButton: View {
             ZStack {
                 Rectangle()
                     .foregroundColor(.white.opacity(0.1))
-                    .frame(width: 50, height: 50)
-                    .cornerRadius(15)
+                    .frame(width: 60, height: 60)
+                    .cornerRadius(20)
                 Image(systemName: "chart.xyaxis.line")
                     .foregroundColor(.white)
                     .font(.system(size: 22))
