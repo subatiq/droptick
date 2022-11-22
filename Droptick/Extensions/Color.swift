@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Color {
-    static let accent = Color("AccentColor")
     static let secondary = Color("SecondaryAccentColor")
     static let dimmed = Color("DimmedAccentColor")
     
