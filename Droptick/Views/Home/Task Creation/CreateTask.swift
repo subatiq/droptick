@@ -36,7 +36,7 @@ struct CreateTask: View {
             .font(.system(size: 30, weight: .black))
             .focused($nameInputFocused)
             .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
-            .background(nameEntered ? .clear : .white.opacity(0.1))
+            .background(nameEntered ? .clear : .gray.opacity(0.12))
             .cornerRadius(15)
             .frame(height: 60)
             .onSubmit {
@@ -63,7 +63,7 @@ struct CreateTask: View {
                         .foregroundColor(.gray)
                         .frame(width: 60, height: 60)
                 }
-                .background(.white.opacity(0.1))
+                .background(.gray.opacity(0.12))
                 .cornerRadius(20)
                 
                 if nameEntered && (duration > 0 || (timeTracker.getTotalTimeUntracked() / 60) > 0) {

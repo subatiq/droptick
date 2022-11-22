@@ -17,11 +17,10 @@ struct SwitchListMenuButton: View {
         } label: {
             ZStack {
                 Rectangle()
-                    .foregroundColor(switched ? .accentColor : .white.opacity(0.1))
+                    .foregroundColor(switched ? .accentColor : .gray.opacity(0.12))
                     .frame(width: 50, height: 50)
                     .cornerRadius(15)
                 Image(systemName: "pencil.line")
-                    .foregroundColor(.white)
                     .font(.system(size: 22))
             }
             

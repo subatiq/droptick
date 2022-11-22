@@ -14,12 +14,12 @@ struct StatsButton: View {
         Button(action: action) {
             ZStack {
                 Rectangle()
-                    .foregroundColor(.white.opacity(0.1))
+                    .foregroundColor(.gray.opacity(0.12))
                     .frame(width: 60, height: 60)
                     .cornerRadius(20)
                 Image(systemName: "chart.xyaxis.line")
-                    .foregroundColor(.white)
                     .font(.system(size: 22))
+                    .foregroundColor(.primary)
             }
             
         }

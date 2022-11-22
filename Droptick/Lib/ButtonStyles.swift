@@ -30,9 +30,9 @@ struct AddTaskButton: ButtonStyle {
             .padding(20)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(LinearGradient(gradient: Gradient(colors: [.secondary, .accent, .secondary]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .fill(LinearGradient(gradient: Gradient(colors: [.secondary, .accentColor, .secondary]), startPoint: .topLeading, endPoint: .bottomTrailing))
             )
-            .foregroundColor(.primary)
+            .foregroundColor(.white)
             
     }
 }

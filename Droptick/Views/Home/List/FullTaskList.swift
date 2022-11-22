@@ -39,7 +39,7 @@ struct FullTaskCell: View {
         ZStack {
             Rectangle()
                 .frame(maxWidth: .infinity)
-                .foregroundColor(.white.opacity(0.1))
+                .foregroundColor(.gray.opacity(0.12))
                 .cornerRadius(10)
             
             HStack(alignment: .center) {

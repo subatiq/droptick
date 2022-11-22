@@ -32,17 +32,17 @@ public struct HourAndMinutesField: View {
         ZStack {
             HStack(alignment: .center, spacing: 0) {
                 Text(String(self.getImageName(at: 0)))
-                    .foregroundColor(self.enteredString.count > 0 ? .white : .gray)
+                    .opacity(self.enteredString.count > 0 ? 1 : 0.2)
                 Text(String(self.getImageName(at: 1)))
-                    .foregroundColor(self.enteredString.count > 1 ? .white : .gray)
+                    .opacity(self.enteredString.count > 1 ? 1 : 0.2)
                 Text(":")
                     .font(.system(size: 50, weight: .black))
-                    .foregroundColor(self.enteredString.count > 1 ? .white : .gray)
+                    .opacity(self.enteredString.count > 1 ? 1 : 0.2)
                     .padding(.bottom, 5)
                 Text(String(self.getImageName(at: 2)))
-                    .foregroundColor(self.enteredString.count > 2 ? .white : .gray)
+                    .opacity(self.enteredString.count > 2 ? 1 : 0.2)
                 Text(String(self.getImageName(at: 3)))
-                    .foregroundColor(self.enteredString.count > 3 ? .white : .gray)
+                    .opacity(self.enteredString.count > 3 ? 1 : 0.2)
                 
             }
             .font(.system(size: 60, weight: .black))

@@ -15,12 +15,9 @@ struct TaskListView: View {
             VStack {
                 ForEach(self.timeTracker.getSimpleDisplayTasksList(), id: \.name) { task in
                     TaskCell(task: task, timeTracker: timeTracker)
-//                        .listRowSeparator(.hidden)
                 }
             }
         }
-        
-//        .listStyle(PlainListStyle())
     }
 }
 
@@ -37,7 +34,7 @@ struct TaskCell: View {
         ZStack {
             Rectangle()
                 .frame(maxWidth: .infinity)
-                .foregroundColor(.white.opacity(0.1))
+                .foregroundColor(.gray.opacity(0.12))
                 .cornerRadius(20)
             
             HStack(alignment: .center) {
@@ -45,7 +42,7 @@ struct TaskCell: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 8) {
                             Text(task.name)
-                                .foregroundColor(.white)
+
                                 .font(.system(size: 18 , weight: .bold))
                         }
                         Spacer()
@@ -60,13 +57,12 @@ struct TaskCell: View {
                     Text(String(format: "%02d:%02d", convertToHours(minutes:task.duration), convertToMinutes(minutes: task.duration)))
                     
                 }
-//                .foregroundColor(.orange)
-                .foregroundColor(.white)
                 .font(.system(size: 16, weight: .bold))
                 
             }
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
         }
+        .foregroundColor(Color.primary)
         
     }
     .sheet(isPresented: $showingStats) {
