@@ -57,7 +57,7 @@ public struct HourAndMinutesField: View {
     
     private var backgroundField: some View {
         let boundDigit = Binding<String>(get: { self.enteredString }, set: { newValue in
-            print(newValue, enteredString)
+            self.enteredString = newValue
             if (newValue.count == 0 && enteredString.count == 4) {
                 // do nothing
             }

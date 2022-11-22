@@ -24,34 +24,38 @@ struct EditTask: View {
 
     var body: some View {
         VStack {
-//            HStack {
-//                Spacer()
-//                Button() {
-//                    print("Delete")
-//                }
-//                label: {
-//                    Image(systemName: "trash.fill")
-//                        .foregroundColor(.accentColor)
-//                        .frame(width: 60, height: 60)
-//                }
-//                .background(Color.accentColor.opacity(0.1))
-//                .cornerRadius(20)
-//            }
-//            Spacer()
-//            TextField(
-//                name,
-//                text: $name
-//            )
-//            .multilineTextAlignment(.center)
-//            .font(.system(size: 25, weight: .bold))
-//            .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
-//            .background(.clear)
-//            .cornerRadius(15)
-//            .frame(height: 60)
-//            HourAndMinutesField(minutes: $duration, completed: .constant(false), focusOnAppearance: false)
-//            Spacer()
+            VStack(alignment: .leading) {
+                Text(task.name)
+                    .multilineTextAlignment(.leading)
+                    .font(.system(size: 30, weight: .black))
+                    .padding(.bottom, 15)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Total spent".uppercased())
+                            .multilineTextAlignment(.leading)
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.gray)
+                        Text(formatToHoursAndMinutes(totalSeconds: task.duration * 60))
+                            .multilineTextAlignment(.leading)
+                            .font(.system(size: 40, weight: .black))
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing) {
+                        Text("% of the day".uppercased())
+                            .multilineTextAlignment(.trailing)
+                            .font(.system(size: 14, weight: .bold))
+                            .foregroundColor(.gray)
+                        Text("\(task.duration * 100 / 1440)%")
+                            .multilineTextAlignment(.trailing)
+                            .font(.system(size: 40, weight: .black))
+                    }
+                }
+                
+            }
+            .padding(20)
+            Divider()
             
-            Text("Edit \(task.name) records")
+            Text("Edit records")
                 .font(.system(size: 22, weight: .bold))
                 .padding(.top, 20)
             FullEditTaskListView(task: self.task, timeTracker: timeTracker)

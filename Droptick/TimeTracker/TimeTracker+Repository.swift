@@ -61,7 +61,6 @@ extension TimeTrackerRepository: TimeTrackerRepositoryInterface {
             guard let taskToDelete = fetched.first(where: {$0.publicID == task.publicID}) else {
                 return
             }
-            print(taskToDelete)
             switch repository.delete(entity: taskToDelete) {
             case .success(_):
                 repository.save()
