@@ -78,8 +78,14 @@ public struct HourAndMinutesField: View {
     private func submitPin() {
         
         if self.enteredString.count > 3 {
-            focused = false
-            completed = true
+            if self.minutes > 0 {
+                focused = false
+                completed = true
+            }
+            else {
+                self.enteredString = ""
+                completed = false
+            }
         }
         else {
             completed = false
