@@ -17,6 +17,7 @@
 		B146BE602925177F008C97C1 /* TaskListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE5F2925177F008C97C1 /* TaskListTests.swift */; };
 		B146BE6229258C87008C97C1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146BE6129258C87008C97C1 /* Date.swift */; };
 		B1792A50292ABA89008AC5B4 /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1792A4F292ABA89008AC5B4 /* TaskEditView.swift */; };
+		B1AC62922931FD6F0053434D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AC62912931FD6F0053434D /* OnboardingView.swift */; };
 		B1B4312229201B910094E1A6 /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4312129201B910094E1A6 /* CreateTask.swift */; };
 		B1CE742D291FEED6002C7086 /* DroptickApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742C291FEED6002C7086 /* DroptickApp.swift */; };
 		B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE742E291FEED6002C7086 /* Persistence.swift */; };
@@ -58,6 +59,7 @@
 		B146BE5F2925177F008C97C1 /* TaskListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTests.swift; sourceTree = "<group>"; };
 		B146BE6129258C87008C97C1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		B1792A4F292ABA89008AC5B4 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
+		B1AC62912931FD6F0053434D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B1B4312129201B910094E1A6 /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 		B1CE7429291FEED6002C7086 /* Droptick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Droptick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1CE742C291FEED6002C7086 /* DroptickApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroptickApp.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				B1CE7437291FEED8002C7086 /* Droptick.entitlements */,
 				B1CE7430291FEED6002C7086 /* Droptick.xcdatamodeld */,
 				B1CE7438291FEED8002C7086 /* Preview Content */,
+				B1AC62912931FD6F0053434D /* OnboardingView.swift */,
 			);
 			path = Droptick;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				B1CE742F291FEED6002C7086 /* Persistence.swift in Sources */,
 				B13CF5B62920FCE20043C750 /* Color.swift in Sources */,
 				B1CE746D291FFFEB002C7086 /* ButtonStyles.swift in Sources */,
+				B1AC62922931FD6F0053434D /* OnboardingView.swift in Sources */,
 				B1F433F92921A26B00AE2A78 /* Repository.swift in Sources */,
 				B1CE746F2920018A002C7086 /* TimeStats.swift in Sources */,
 				B1F433F72921A1AC00AE2A78 /* TimeTracker+Repository.swift in Sources */,
