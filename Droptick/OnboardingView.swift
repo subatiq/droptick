@@ -15,10 +15,16 @@ struct OnboardingView: View {
         GeometryReader { geo in
             VStack{
                 Spacer()
-                Text("Track time with")
+                
+                Image("Logo")
+                    .resizable()
+                    .frame(width: 64.0, height: 64.0)
+                    .cornerRadius(10)
+                Text("Welcome to Droptick")
                     .font(.system(size: 22, weight: .bold))
-                Text("Droptick")
-                    .font(.system(size: 36, weight: .bold))
+//                Text("DROPTICK")
+//                    .foregroundColor(.secondary)
+//                    .font(.system(size: 36, weight: .bold))
 
 //                Text("Time tracking redesigned for humans")
 //                    .font(.system(size: 18, weight: .bold))
