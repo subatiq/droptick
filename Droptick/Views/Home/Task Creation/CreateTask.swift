@@ -43,6 +43,32 @@ struct CreateTask: View {
                 nameEntered = true
             }
             
+            if !nameEntered {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(timeTracker.getSimpleDispleyTasksList(startDay: Date().weekBefore, endDay: Date.now).map{$0.name}, id: \.self) {activity  in
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                    .frame(height: 50)
+                                    .foregroundColor(Color.gray.opacity(0.1))
+                                Text(activity)
+                                    .foregroundColor(.gray.opacity(0.7))
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .multilineTextAlignment(.center)
+                                    .padding(.leading)
+                                    .padding(.trailing)
+                            }
+                            .onTapGesture {
+                                name = activity
+                                nameEntered = true
+                                nameInputFocused = false
+                            }
+                        }
+                    }
+                }
+                .padding(.top, 10)
+            }
+            
             if nameEntered {
                 if !durationEntered {
                     Text("How long did it take?")
