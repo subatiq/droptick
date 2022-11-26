@@ -58,12 +58,12 @@ struct StatisticsView: View {
             )
             if sortedTodos(start: startDate, end: endDate).count > 0 {
                 HStack {
-                    DatePicker("", selection: $startDate, displayedComponents: .date)
+                    DatePicker("", selection: $startDate, in: ...endDate, displayedComponents: .date)
                         .datePickerStyle(CompactDatePickerStyle())
                         .clipped()
                         .labelsHidden()
                     Text("-")
-                    DatePicker("", selection: $endDate, displayedComponents: .date)
+                    DatePicker("", selection: $endDate, in: startDate..., displayedComponents: .date)
                         .datePickerStyle(CompactDatePickerStyle())
                         .clipped()
                         .labelsHidden()
